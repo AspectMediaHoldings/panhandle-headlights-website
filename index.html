@@ -80,9 +80,12 @@
     border-bottom: 1px solid rgba(255,255,255,.08);
   }
   header.site .wrap { display: flex; align-items: center; justify-content: space-between; padding: .85rem 0; }
-  .brand { display: flex; align-items: center; gap: .6rem; color: #fff; font-weight: 800; letter-spacing: -.02em; min-height: 44px; padding-block: 6px; }
-  .brand .dot { width: 34px; height: 34px; border-radius: 9px; background: radial-gradient(circle at 30% 30%, var(--beam), var(--beam-strong)); box-shadow: 0 0 18px rgba(255,191,61,.6); flex: none; }
+  .brand { display: flex; align-items: center; gap: .7rem; color: #fff; font-weight: 800; letter-spacing: -.02em; min-height: 44px; padding-block: 6px; text-decoration: none; }
+  .brand-logo { height: 44px; width: auto; flex: none; display: block; }
+  .brand-text { display: flex; flex-direction: column; line-height: 1.15; }
+  .brand-name { font-size: .95rem; }
   .brand small { display: block; font-weight: 500; font-size: .72rem; color: #9aa4b2; letter-spacing: .02em; }
+  @media (max-width: 480px) { .brand-text { display: none; } }
   header.site nav { display: none; gap: 1.6rem; font-weight: 600; font-size: .95rem; }
   header.site nav a { color: #cfd6e0; text-decoration: none; }
   header.site nav a:hover { color: #fff; }
@@ -102,6 +105,7 @@
     pointer-events: none;
   }
   .hero .wrap { position: relative; display: grid; gap: 2.5rem; padding: clamp(2.5rem,5vw,4.5rem) 0 var(--section); }
+  .hero-logo { max-width: min(420px, 70%); height: auto; margin-bottom: 1.5rem; display: block; filter: drop-shadow(0 8px 24px rgba(0,0,0,.4)); }
   @media (min-width: 940px) { .hero .wrap { grid-template-columns: 1.05fr 1fr; align-items: center; } }
   .eyebrow { display: inline-flex; align-items: center; gap: .5rem; font-weight: 700; font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; color: var(--beam); }
   .hero h1 { font-size: var(--display); margin: 1rem 0 1.1rem; }
@@ -226,8 +230,11 @@
 <header class="site">
   <div class="wrap">
     <a class="brand" href="#top">
-      <span class="dot" aria-hidden="true"></span>
-      <span>Panhandle Headlight Restoration<small>Mobile &middot; Marianna, FL</small></span>
+      <picture>
+        <source srcset="/logo-header.webp" type="image/webp">
+        <img src="/logo-header.png" alt="Panhandle Headlight Restoration" width="76" height="60" class="brand-logo" />
+      </picture>
+      <span class="brand-text"><span class="brand-name">Panhandle Headlight Restoration</span><small>Mobile &middot; Marianna, FL</small></span>
     </a>
     <nav aria-label="Primary">
       <a href="#why">Why us</a>
@@ -246,6 +253,10 @@
   <section class="hero">
     <div class="wrap">
       <div>
+        <picture>
+          <source srcset="/logo-hero.webp" type="image/webp">
+          <img src="/logo-hero.png" alt="Panhandle Headlight Restoration — we come to you" width="800" height="436" class="hero-logo" />
+        </picture>
         <span class="eyebrow"><span class="dot" style="width:8px;height:8px;border-radius:50%;background:var(--beam)"></span> Mobile headlight restoration</span>
         <h1>Foggy headlights, <em>gone for good.</em></h1>
         <p class="lead">We sand, polish, and seal your lenses with a durable 2K clearcoat, so they stay clear instead of yellowing again in a month. We come to you.</p>
@@ -460,7 +471,13 @@
 
 <footer class="site">
   <div class="wrap">
-    <a class="brand" href="#top"><span class="dot" aria-hidden="true"></span> Panhandle Headlight Restoration</a>
+    <a class="brand" href="#top">
+      <picture>
+        <source srcset="/logo-header.webp" type="image/webp">
+        <img src="/logo-header.png" alt="" width="76" height="60" class="brand-logo" />
+      </picture>
+      <span class="brand-name">Panhandle Headlight Restoration</span>
+    </a>
     <p>Mobile headlight restoration &middot; Marianna, FL &middot; <a href="tel:+18505836322">(850) 583-6322</a> &middot; <a href="mailto:info@panhandleheadlights.com">info@panhandleheadlights.com</a></p>
     <p class="legal">Panhandle Headlight Restoration, LLC. Results vary with lens age and condition. Guarantee covers workmanship on the restored outer surface and does not cover physical damage, internal fogging, or harsh-chemical exposure. See your service agreement for full terms. &copy; <span id="yr"></span> Panhandle Headlight Restoration, LLC.</p>
   </div>
