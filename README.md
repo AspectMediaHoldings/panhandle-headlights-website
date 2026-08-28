@@ -45,3 +45,4 @@ Manual: drag-and-drop the repo root into Netlify Drop.
 - [ ] Gallery section has 4 placeholder tiles — swap for real before/after job photos
 - [ ] Netlify Forms notification: enable email alerts in Netlify dashboard → Forms → quote → Notifications
 - [ ] Cloudflare migration: see Drive setup guide `panhandleheadlights.com — Cloudflare Setup Guide — 2026-08-21`
+
