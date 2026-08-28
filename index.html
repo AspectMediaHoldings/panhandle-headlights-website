@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Panhandle Headlight Restoration | Marianna, FL Mobile Headlight Restoration</title>
+<meta name="description" content="Mobile headlight restoration in Marianna and the Florida Panhandle. We sand, polish, and seal with a durable 2K clearcoat so your headlights stay clear. $80 to $150 per pair. We come to you." />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Panhandle Headlight Restoration | Marianna, FL" />
+<meta property="og:description" content="Mobile headlight restoration in Marianna and the Florida Panhandle. We come to you. $80-$150 per pair." />
+<meta property="og:image" content="https://panhandleheadlights.com/og-image.jpg" />
+<meta property="og:url" content="https://panhandleheadlights.com/" />
+<meta name="twitter:card" content="summary_large_image" />
+<style>
+  :root {
+    /* palette */
+    --night: #10141c;
+    --night-2: #171d28;
+    --ink: #14181f;
+    --paper: #f6f4ef;
+    --paper-2: #ffffff;
+    --muted: #5c6470;
+    --line: #e2ddd2;
+    --beam: #ffd66b;          /* headlight glow */
+    --beam-strong: #ffbf3d;
+    --trust: #2f7de1;         /* clarity blue */
+    --good: #1f9d63;
+    /* type scale */
+    --display: clamp(2.6rem, 1.1rem + 6vw, 5.5rem);
+    --h2: clamp(1.8rem, 1rem + 2.6vw, 3rem);
+    --h3: clamp(1.15rem, 0.9rem + 0.9vw, 1.5rem);
+    --body: clamp(1rem, 0.95rem + 0.25vw, 1.15rem);
+    /* space */
+    --section: clamp(3.5rem, 2rem + 6vw, 8rem);
+    --radius: 16px;
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+    --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-sans);
+    color: var(--ink);
+    background: var(--paper);
+    font-size: var(--body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { line-height: 1.05; letter-spacing: -0.02em; font-weight: 800; }
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+  .wrap { width: min(1120px, 92vw); margin-inline: auto; }
+
+  /* buttons */
+  .btn {
+    display: inline-flex; align-items: center; gap: .5rem;
+    font-weight: 700; font-size: 1.02rem;
+    padding: .95rem 1.5rem; border-radius: 999px;
+    border: 2px solid transparent; cursor: pointer;
+    text-decoration: none; transition: transform .2s var(--ease), box-shadow .2s var(--ease), background .2s var(--ease);
+  }
+  .btn-primary { background: var(--beam-strong); color: #241a00; box-shadow: 0 8px 24px rgba(255,191,61,.35); }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(255,191,61,.5); }
+  .btn-ghost { border-color: rgba(255,255,255,.35); color: #fff; }
+  .btn-ghost:hover { background: rgba(255,255,255,.08); transform: translateY(-2px); }
+  .btn-dark { background: var(--ink); color: #fff; }
+  .btn-dark:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,.25); }
+  :focus-visible { outline: 3px solid var(--trust); outline-offset: 3px; }
+
+  /* ---------- header ---------- */
+  header.site {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(16,20,28,.85); backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+  header.site .wrap { display: flex; align-items: center; justify-content: space-between; padding: .85rem 0; }
+  .brand { display: flex; align-items: center; gap: .6rem; color: #fff; font-weight: 800; letter-spacing: -.02em; min-height: 44px; padding-block: 6px; }
+  .brand .dot { width: 34px; height: 34px; border-radius: 9px; background: radial-gradient(circle at 30% 30%, var(--beam), var(--beam-strong)); box-shadow: 0 0 18px rgba(255,191,61,.6); flex: none; }
+  .brand small { display: block; font-weight: 500; font-size: .72rem; color: #9aa4b2; letter-spacing: .02em; }
+  header.site nav { display: none; gap: 1.6rem; font-weight: 600; font-size: .95rem; }
+  header.site nav a { color: #cfd6e0; text-decoration: none; }
+  header.site nav a:hover { color: #fff; }
+  header .head-cta { display: none; }
+  @media (min-width: 820px) {
+    header.site nav { display: flex; }
+    header .head-cta { display: inline-flex; }
+  }
+
+  /* ---------- hero ---------- */
+  .hero { position: relative; background: radial-gradient(120% 90% at 80% -10%, #2a3346 0%, var(--night) 55%); color: #fff; overflow: hidden; }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background:
+      radial-gradient(40% 60% at 88% 20%, rgba(255,214,107,.22), transparent 70%),
+      radial-gradient(30% 50% at 12% 90%, rgba(47,125,225,.18), transparent 70%);
+    pointer-events: none;
+  }
+  .hero .wrap { position: relative; display: grid; gap: 2.5rem; padding: clamp(2.5rem,5vw,4.5rem) 0 var(--section); }
+  @media (min-width: 940px) { .hero .wrap { grid-template-columns: 1.05fr 1fr; align-items: center; } }
+  .eyebrow { display: inline-flex; align-items: center; gap: .5rem; font-weight: 700; font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; color: var(--beam); }
+  .hero h1 { font-size: var(--display); margin: 1rem 0 1.1rem; }
+  .hero h1 em { font-style: normal; color: var(--beam); }
+  .hero p.lead { font-size: clamp(1.05rem,.95rem + .6vw,1.35rem); color: #c8cfda; max-width: 34ch; }
+  .hero .cta-row { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.8rem; }
+  .hero .price-tag { margin-top: 1.4rem; font-size: .95rem; color: #9aa4b2; }
+  .hero .price-tag b { color: #fff; }
+
+  /* before/after slider */
+  .ba {
+    position: relative; aspect-ratio: 4/3; border-radius: var(--radius); overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,.45); user-select: none; touch-action: none;
+    border: 1px solid rgba(255,255,255,.1);
+  }
+  .ba-layer { position: absolute; inset: 0; background-size: cover; background-position: center; }
+  /* placeholder visuals — replace with real photos */
+  .ba-after  { background: linear-gradient(135deg,#e9f3ff,#c7ddf5 55%,#a9c9ee); }
+  .ba-before { background: linear-gradient(135deg,#c9b57a,#9c8442 60%,#6f5c28); clip-path: inset(0 0 0 50%); }
+  .ba-tag { position: absolute; bottom: 12px; font-size: .72rem; font-weight: 800; letter-spacing: .1em; padding: .3rem .6rem; border-radius: 6px; color: #fff; background: rgba(0,0,0,.55); }
+  .ba-tag.left { left: 12px; } .ba-tag.right { right: 12px; }
+  .ba-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: #fff; transform: translateX(-50%); box-shadow: 0 0 0 1px rgba(0,0,0,.15); }
+  .ba-knob { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 44px; height: 44px; border-radius: 50%; background: #fff; display: grid; place-items: center; box-shadow: 0 6px 18px rgba(0,0,0,.35); font-size: 0; }
+  .ba-knob::before { content: "‹ ›"; font-size: 18px; font-weight: 900; color: var(--ink); letter-spacing: -2px; }
+  .ba input[type=range] { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: ew-resize; margin: 0; }
+  .ph-note { font-size: .78rem; color: #8b93a0; margin-top: .6rem; text-align: center; }
+
+  /* ---------- trust strip ---------- */
+  .trust { background: var(--ink); color: #fff; }
+  .trust .wrap { display: grid; grid-template-columns: repeat(2,1fr); gap: 1px; }
+  @media (min-width: 760px) { .trust .wrap { grid-template-columns: repeat(4,1fr); } }
+  .trust .cell { padding: 1.4rem 1rem; text-align: center; }
+  .trust .cell b { display: block; font-size: 1.05rem; }
+  .trust .cell span { font-size: .85rem; color: #9aa4b2; }
+
+  /* ---------- sections ---------- */
+  section { padding-block: var(--section); }
+  .sec-head { max-width: 46ch; margin-bottom: 2.6rem; }
+  .sec-head .eyebrow { color: #8B5A0A; }  /* WCAG AA: 5.08:1 on --paper cream */
+  .sec-head h2 { font-size: var(--h2); margin: .7rem 0 .8rem; }
+  .sec-head p { color: var(--muted); }
+
+  /* why / problem */
+  .split { display: grid; gap: 2rem; }
+  @media (min-width: 900px) { .split { grid-template-columns: 1.1fr .9fr; align-items: center; } }
+  .card {
+    background: var(--paper-2); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 1.6rem; transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+  }
+  .why-list { display: grid; gap: 1rem; }
+  .why-list .card { display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: start; }
+  .why-list .card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(0,0,0,.08); }
+  .why-list .ic { width: 42px; height: 42px; border-radius: 11px; background: linear-gradient(135deg,var(--beam),var(--beam-strong)); display: grid; place-items: center; font-weight: 900; color: #241a00; }
+  .why-list h3 { font-size: var(--h3); margin-bottom: .2rem; }
+  .why-list p { color: var(--muted); font-size: .98rem; }
+
+  /* pricing */
+  .tiers { display: grid; gap: 1.2rem; }
+  @media (min-width: 820px) { .tiers { grid-template-columns: repeat(3,1fr); } }
+  .tier { background: var(--paper-2); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.8rem 1.5rem; display: flex; flex-direction: column; transition: transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s var(--ease); }
+  .tier:hover { transform: translateY(-4px); box-shadow: 0 18px 40px rgba(0,0,0,.1); }
+  .tier.feature { border-color: var(--beam-strong); box-shadow: 0 18px 44px rgba(255,191,61,.18); position: relative; }
+  .tier.feature .flag { position: absolute; top: -13px; left: 1.5rem; background: var(--beam-strong); color: #241a00; font-size: .72rem; font-weight: 800; letter-spacing: .08em; padding: .3rem .7rem; border-radius: 6px; text-transform: uppercase; }
+  .tier h3 { font-size: var(--h3); }
+  .tier .price { font-size: 2.4rem; font-weight: 800; letter-spacing: -.03em; margin: .4rem 0 .2rem; }
+  .tier .price small { font-size: .9rem; font-weight: 600; color: var(--muted); }
+  .tier ul { list-style: none; display: grid; gap: .6rem; margin: 1.1rem 0 1.6rem; }
+  .tier li { display: flex; gap: .6rem; font-size: .96rem; color: #3a414c; }
+  .tier li::before { content: "✓"; color: var(--good); font-weight: 900; }
+  .tier .btn { margin-top: auto; justify-content: center; }
+  .fineprint { color: var(--muted); font-size: .85rem; margin-top: 1.2rem; }
+
+  /* steps */
+  .steps { display: grid; gap: 1.2rem; counter-reset: s; }
+  @media (min-width: 760px) { .steps { grid-template-columns: repeat(4,1fr); } }
+  .step { position: relative; padding-top: 2.6rem; }
+  .step::before { counter-increment: s; content: counter(s); position: absolute; top: 0; left: 0; width: 40px; height: 40px; border-radius: 50%; background: var(--ink); color: #fff; display: grid; place-items: center; font-weight: 800; }
+  .step h3 { font-size: 1.1rem; margin-bottom: .3rem; }
+  .step p { color: var(--muted); font-size: .95rem; }
+
+  /* gallery */
+  .gallery { display: grid; gap: 1rem; grid-template-columns: repeat(2,1fr); }
+  @media (min-width: 760px) { .gallery { grid-template-columns: repeat(4,1fr); } }
+  .gallery .ph { aspect-ratio: 1; border-radius: 12px; background: linear-gradient(135deg,#dfe6ef,#c4d2e2); display: grid; place-items: center; color: #7c8797; font-size: .8rem; font-weight: 700; text-align: center; padding: .5rem; border: 1px dashed #b9c4d2; }
+
+  /* CTA band */
+  .cta-band { background: radial-gradient(120% 120% at 20% 0%, #24304a, var(--night)); color: #fff; text-align: center; }
+  .cta-band h2 { font-size: var(--h2); margin-bottom: .8rem; }
+  .cta-band p { color: #c8cfda; max-width: 44ch; margin: 0 auto 1.8rem; }
+  .cta-band .cta-row { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; }
+
+  /* footer */
+  footer.site { background: var(--ink); color: #aab2be; padding: 2.4rem 0 6rem; font-size: .9rem; }
+  footer.site .wrap { display: grid; gap: 1rem; }
+  footer .brand { color: #fff; min-height: 44px; padding-block: 6px; }
+  footer a { color: var(--beam); text-decoration: underline; text-underline-offset: 2px; }
+  footer a[href^="tel:"], footer a[href^="mailto:"] { display: inline-block; padding-block: 12px; min-height: 44px; line-height: 1.25; }
+  footer .legal { font-size: .78rem; color: #6d7583; max-width: 60ch; }
+
+  /* sticky mobile call bar */
+  .callbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: flex; gap: .5rem; padding: .6rem; background: rgba(16,20,28,.95); backdrop-filter: blur(8px); border-top: 1px solid rgba(255,255,255,.1); }
+  .callbar .btn { flex: 1; justify-content: center; padding: .8rem; }
+  @media (min-width: 820px) { .callbar { display: none; } }
+
+  /* quote form + pay */
+  .quote-grid { display: grid; gap: 1.5rem; }
+  @media (min-width: 860px) { .quote-grid { grid-template-columns: 1.4fr .9fr; align-items: start; } }
+  .qform { display: grid; gap: .9rem; }
+  .qform label { display: grid; gap: .35rem; font-weight: 600; font-size: .9rem; color: #3a414c; }
+  .qform input, .qform select, .qform textarea { font: inherit; padding: .7rem .8rem; border: 1px solid var(--line); border-radius: 10px; background: #fff; color: var(--ink); width: 100%; }
+  .qform input:focus, .qform select:focus, .qform textarea:focus { outline: 2px solid var(--trust); border-color: var(--trust); }
+  .qform .frow { display: grid; gap: .9rem; grid-template-columns: 1fr 1fr; }
+  .qform .hp { position: absolute; left: -9999px; }
+  .qform button { margin-top: .4rem; justify-content: center; }
+  .pay-card { position: sticky; top: 90px; }
+
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="dot" aria-hidden="true"></span>
+      <span>Panhandle Headlight Restoration<small>Mobile &middot; Marianna, FL</small></span>
+    </a>
+    <nav aria-label="Primary">
+      <a href="#why">Why us</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#how">How it works</a>
+      <a href="#area">Service area</a>
+      <a href="#quote">Quote</a>
+    </nav>
+    <a class="btn btn-primary head-cta" href="tel:+18505836322">Call now</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow"><span class="dot" style="width:8px;height:8px;border-radius:50%;background:var(--beam)"></span> Mobile headlight restoration</span>
+        <h1>Foggy headlights, <em>gone for good.</em></h1>
+        <p class="lead">We sand, polish, and seal your lenses with a durable 2K clearcoat, so they stay clear instead of yellowing again in a month. We come to you.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#quote">Get a free quote</a>
+          <a class="btn btn-ghost" href="#pricing">See pricing</a>
+        </div>
+        <p class="price-tag"><b>$80&ndash;$150</b> per pair &middot; Serving Marianna, the Panhandle, South AL &amp; SW GA &middot; Backed by up to a 2-year guarantee</p>
+      </div>
+      <div>
+        <div class="ba" id="ba">
+          <div class="ba-layer ba-after"></div>
+          <div class="ba-layer ba-before" id="baBefore"></div>
+          <span class="ba-tag left">BEFORE</span>
+          <span class="ba-tag right">AFTER</span>
+          <div class="ba-handle" id="baHandle"><span class="ba-knob"></span></div>
+          <input type="range" min="0" max="100" value="50" id="baRange" aria-label="Drag to compare before and after" />
+        </div>
+        <p class="ph-note">Placeholder slider &mdash; drag it. Swap in a real before/after photo before launch.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <div class="trust">
+    <div class="wrap">
+      <div class="cell"><b>We come to you</b><span>Home, work, or your lot</span></div>
+      <div class="cell"><b>2K clearcoat</b><span>Refinish-grade, not a wipe-on</span></div>
+      <div class="cell"><b>Up to 2-yr guarantee</b><span>We re-do it if it hazes</span></div>
+      <div class="cell"><b>Before &amp; after photos</b><span>Every job, every time</span></div>
+    </div>
+  </div>
+
+  <!-- WHY -->
+  <section id="why" class="wrap">
+    <div class="split">
+      <div>
+        <div class="sec-head">
+          <span class="eyebrow">Why ours lasts</span>
+          <h2>Most restorations skip the one step that matters.</h2>
+          <p>Sanding out the yellow is the easy part. If the lens is not sealed properly afterward, the bare plastic starts hazing again within months. That is the cheap job you have seen before. We do it the durable way.</p>
+        </div>
+        <a class="btn btn-dark" href="#pricing">See what that costs</a>
+      </div>
+      <div class="why-list">
+        <div class="card"><div class="ic">1</div><div><h3>Wet-sanded right</h3><p>A proper grit progression removes the oxidation without gouging the lens.</p></div></div>
+        <div class="card"><div class="ic">2</div><div><h3>Sealed to last</h3><p>A durable 2K urethane clearcoat, the same class used in auto refinishing, locks in the clarity.</p></div></div>
+        <div class="card"><div class="ic">3</div><div><h3>A fraction of replacement</h3><p>New headlights run $250 to $750 each, more for LED. We restore for far less.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" style="background:var(--paper-2);border-block:1px solid var(--line);">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Simple pricing</span>
+        <h2>Pick your finish.</h2>
+        <p>Prices are per pair of headlights. Heavily oxidized or oversized truck and SUV lenses may be quoted at the top of the range.</p>
+      </div>
+      <div class="tiers">
+        <div class="tier">
+          <h3>Clear</h3>
+          <div class="price">$80<small>&ndash;$100 / pair</small></div>
+          <ul>
+            <li>Wet sand &amp; polish</li>
+            <li>Wipe-on ceramic seal</li>
+            <li>Best for light to medium haze</li>
+            <li>12-month guarantee</li>
+          </ul>
+          <a class="btn btn-dark" href="tel:+18505836322">Book Clear</a>
+        </div>
+        <div class="tier feature">
+          <span class="flag">Most durable</span>
+          <h3>Clear+ 2K</h3>
+          <div class="price">$110<small>&ndash;$130 / pair</small></div>
+          <ul>
+            <li>Full wet sand &amp; polish</li>
+            <li>Durable 2K urethane clearcoat</li>
+            <li>Longest-lasting finish</li>
+            <li>24-month (2-year) guarantee</li>
+          </ul>
+          <a class="btn btn-primary" href="tel:+18505836322">Book Clear+</a>
+        </div>
+        <div class="tier">
+          <h3>Truck &amp; SUV</h3>
+          <div class="price">$130<small>&ndash;$150 / pair</small></div>
+          <ul>
+            <li>For large or heavily oxidized lenses</li>
+            <li>Durable 2K clearcoat</li>
+            <li>Add taillights &amp; trim</li>
+            <li>24-month (2-year) guarantee</li>
+          </ul>
+          <a class="btn btn-dark" href="tel:+18505836322">Get a quote</a>
+        </div>
+      </div>
+      <p style="margin-top:1.8rem;padding:1rem 1.2rem;border-radius:12px;background:linear-gradient(135deg,rgba(47,125,225,.08),rgba(255,191,61,.12));border:1px solid var(--line);font-weight:600;color:var(--ink);">Military &amp; Veterans, First Responders, and Teachers: <strong>10% off</strong> &mdash; or <strong>15% off</strong> our durable 2K finish. Just show valid ID at your appointment.</p>
+      <p class="fineprint">Free mobile service within about 30 miles of Marianna. 30 to 50 miles: a $25 trip fee. Beyond 50 miles (wider Panhandle, South Alabama, Southwest Georgia): a travel surcharge applies, and multi-vehicle or dealer batches are preferred. Dealers and lots: batch pricing from about $50 per car. One discount per job; discounts apply to retail work and do not stack. Prices subject to applicable Florida sales tax.</p>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section id="how" class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">How it works</span>
+      <h2>Clear headlights in about an hour.</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Text a photo</h3><p>Send a picture of your headlights for a quick quote.</p></div>
+      <div class="step"><h3>We come to you</h3><p>We set up at your home, work, or lot. No need to drive anywhere.</p></div>
+      <div class="step"><h3>Sand, polish, seal</h3><p>Usually 30 to 45 minutes per car, done on the spot.</p></div>
+      <div class="step"><h3>See the difference</h3><p>We show you the before and after, then you pay when it is done.</p></div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="work" style="background:var(--paper-2);border-block:1px solid var(--line);">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Recent work</span>
+        <h2>The proof is in the glass.</h2>
+        <p>Replace these with your own before/after photos as you complete jobs.</p>
+      </div>
+      <div class="gallery">
+        <div class="ph">Before / After<br>photo 1</div>
+        <div class="ph">Before / After<br>photo 2</div>
+        <div class="ph">Before / After<br>photo 3</div>
+        <div class="ph">Before / After<br>photo 4</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA -->
+  <section id="area" class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Service area</span>
+      <h2>Based in Marianna. We travel to you across three states.</h2>
+      <p>Mobile headlight restoration throughout the Florida Panhandle, South Alabama, and Southwest Georgia. Free within about 30 miles of Marianna; a travel fee applies farther out.</p>
+    </div>
+    <div class="tiers">
+      <div class="card">
+        <h3 style="font-size:var(--h3);">Core area &mdash; no trip fee</h3>
+        <p style="color:var(--muted);margin-top:.5rem;">Marianna, Cottondale, Grand Ridge, Sneads, Malone, Graceville, Alford, Campbellton, Greenwood, Bascom (Jackson County) &middot; Chipley &middot; Bonifay &middot; Blountstown &middot; Dothan, AL &middot; Bainbridge, GA.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:var(--h3);">Florida Panhandle</h3>
+        <p style="color:var(--muted);margin-top:.5rem;">Panama City, Lynn Haven, Tallahassee, Quincy, Port St. Joe, DeFuniak Springs, and the surrounding FL counties (Bay, Gadsden, Leon, Calhoun, Washington, Holmes, Walton, Gulf, Liberty).</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:var(--h3);">South AL &amp; Southwest GA</h3>
+        <p style="color:var(--muted);margin-top:.5rem;">Dothan, Ozark, Enterprise, Troy, Eufaula (AL) &middot; Bainbridge, Donalsonville, Blakely, Colquitt, Cairo, Thomasville, Albany (GA) &middot; and the counties in between.</p>
+      </div>
+    </div>
+    <p class="fineprint">Not sure if you're in range? Text your location for a quick answer. Longer hauls are welcome for multi-vehicle jobs and dealer lots.</p>
+  </section>
+
+  <!-- QUOTE + PAY -->
+  <section id="quote" style="background:var(--paper-2);border-block:1px solid var(--line);">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Free quote</span>
+        <h2>Get your price in minutes.</h2>
+        <p>Send a couple photos of your headlights and we'll text you a quote — usually the same day. No obligation.</p>
+      </div>
+      <div class="quote-grid">
+        <form name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" class="qform">
+          <input type="hidden" name="form-name" value="quote" />
+          <p class="hp"><label>Leave this blank: <input name="bot-field" /></label></p>
+          <div class="frow">
+            <label>Name<input type="text" name="name" required></label>
+            <label>Phone<input type="tel" name="phone" required></label>
+          </div>
+          <label>Email<input type="email" name="email"></label>
+          <label>Vehicle (year, make, model)<input type="text" name="vehicle" placeholder="2014 Ford F-150"></label>
+          <label>Headlight condition
+            <select name="condition">
+              <option>Light haze</option>
+              <option>Yellowed</option>
+              <option>Heavily oxidized</option>
+              <option>Not sure</option>
+            </select>
+          </label>
+          <label>Photos (optional)<input type="file" name="photos" accept="image/*" multiple></label>
+          <label>Anything else?<textarea name="message" rows="3"></textarea></label>
+          <button class="btn btn-primary" type="submit">Request my free quote</button>
+          <p class="ph-note" style="text-align:left;color:var(--muted);">We reply by text, usually same day. Prefer to text now? Tap the number at the bottom.</p>
+        </form>
+        <aside class="card pay-card">
+          <h3 style="font-size:var(--h3);">Already quoted? Pay online.</h3>
+          <p style="color:var(--muted);margin:.5rem 0 1.2rem;">Secure payment by card or Apple Pay through Stripe. After we quote you, you'll get a secure link by text or email. Booking a slot? Leave a deposit below.</p>
+          <!-- TODO: replace [STRIPE_DEPOSIT_LINK] with your Stripe Payment Link (from the Panhandle Stripe account) -->
+          <a class="btn btn-dark" href="[STRIPE_DEPOSIT_LINK]" style="width:100%;justify-content:center;">Pay booking deposit</a>
+          <p class="ph-note" style="text-align:left;margin-top:1rem;">Powered by Stripe. Your card details never touch this site.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>Ready to see clearly again?</h2>
+      <p>Text a photo of your headlights for a free quote. We will tell you the price up front, no surprises.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="tel:+18505836322">Call or text (850) 583-6322</a>
+        <a class="btn btn-ghost" href="mailto:info@panhandleheadlights.com">Email us</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="dot" aria-hidden="true"></span> Panhandle Headlight Restoration</a>
+    <p>Mobile headlight restoration &middot; Marianna, FL &middot; <a href="tel:+18505836322">(850) 583-6322</a> &middot; <a href="mailto:info@panhandleheadlights.com">info@panhandleheadlights.com</a></p>
+    <p class="legal">Panhandle Headlight Restoration, LLC. Results vary with lens age and condition. Guarantee covers workmanship on the restored outer surface and does not cover physical damage, internal fogging, or harsh-chemical exposure. See your service agreement for full terms. &copy; <span id="yr"></span> Panhandle Headlight Restoration, LLC.</p>
+  </div>
+</footer>
+
+<!-- sticky mobile call bar -->
+<div class="callbar">
+  <a class="btn btn-primary" href="tel:+18505836322">Call</a>
+  <a class="btn btn-ghost" href="sms:+18505836322">Text a photo</a>
+</div>
+
+<script>
+  // before/after slider
+  (function () {
+    var range = document.getElementById('baRange');
+    var before = document.getElementById('baBefore');
+    var handle = document.getElementById('baHandle');
+    function set(v) {
+      before.style.clipPath = 'inset(0 0 0 ' + v + '%)';
+      handle.style.left = v + '%';
+    }
+    if (range) { range.addEventListener('input', function () { set(this.value); }); set(50); }
+    var y = document.getElementById('yr'); if (y) y.textContent = new Date().getFullYear();
+  })();
+</script>
+
+</body>
+</html>
