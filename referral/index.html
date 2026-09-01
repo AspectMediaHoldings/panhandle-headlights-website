@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Referral Program | Panhandle Headlight Restoration</title>
+<meta name="description" content="Refer a friend to Panhandle Headlight Restoration and earn $10 cash or $15 credit toward your next restoration. No apps, no tracking links." />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Referral Program | Panhandle Headlight Restoration" />
+<meta property="og:description" content="Refer a friend and earn $10 cash or $15 credit. No apps, no tracking links." />
+<meta property="og:url" content="https://panhandleheadlights.com/referral/" />
+<style>
+  :root {
+    --night: #10141c;
+    --night-2: #171d28;
+    --ink: #14181f;
+    --paper: #f6f4ef;
+    --paper-2: #ffffff;
+    --muted: #5c6470;
+    --line: #e2ddd2;
+    --beam: #ffd66b;
+    --beam-strong: #ffbf3d;
+    --trust: #2f7de1;
+    --good: #1f9d63;
+    --display: clamp(2.2rem, 1.1rem + 5vw, 4rem);
+    --h2: clamp(1.6rem, 1rem + 2.2vw, 2.4rem);
+    --h3: clamp(1.1rem, 0.9rem + 0.8vw, 1.4rem);
+    --body: clamp(1rem, 0.95rem + 0.25vw, 1.15rem);
+    --section: clamp(3rem, 2rem + 5vw, 6rem);
+    --radius: 16px;
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+    --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-sans);
+    color: var(--ink);
+    background: var(--paper);
+    font-size: var(--body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { line-height: 1.1; letter-spacing: -0.02em; font-weight: 800; }
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+  .wrap { width: min(860px, 92vw); margin-inline: auto; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: .5rem;
+    font-weight: 700; font-size: 1.02rem;
+    padding: .95rem 1.5rem; border-radius: 999px;
+    border: 2px solid transparent; cursor: pointer;
+    text-decoration: none; transition: transform .2s var(--ease), box-shadow .2s var(--ease), background .2s var(--ease);
+  }
+  .btn-primary { background: var(--beam-strong); color: #241a00; box-shadow: 0 8px 24px rgba(255,191,61,.35); }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(255,191,61,.5); }
+  .btn-ghost { border-color: rgba(255,255,255,.35); color: #fff; }
+  .btn-ghost:hover { background: rgba(255,255,255,.08); transform: translateY(-2px); }
+  :focus-visible { outline: 3px solid var(--trust); outline-offset: 3px; }
+
+  /* header */
+  header.site {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(16,20,28,.85); backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+  header.site .wrap { display: flex; align-items: center; justify-content: space-between; padding: .85rem 0; }
+  .brand { display: flex; align-items: center; gap: .7rem; color: #fff; font-weight: 800; letter-spacing: -.02em; min-height: 44px; padding-block: 6px; text-decoration: none; }
+  .brand-logo { height: 44px; width: auto; flex: none; display: block; }
+  .brand-text { display: flex; flex-direction: column; line-height: 1.15; }
+  .brand-name { font-size: .95rem; }
+  .brand small { display: block; font-weight: 500; font-size: .72rem; color: #9aa4b2; letter-spacing: .02em; }
+  @media (max-width: 480px) { .brand-text { display: none; } }
+  header.site nav { display: none; gap: 1.6rem; font-weight: 600; font-size: .95rem; }
+  header.site nav a { color: #cfd6e0; text-decoration: none; }
+  header.site nav a:hover { color: #fff; }
+  header .head-cta { display: none; }
+  @media (min-width: 820px) {
+    header.site nav { display: flex; }
+    header .head-cta { display: inline-flex; }
+  }
+
+  /* hero band */
+  .page-hero {
+    background: radial-gradient(120% 90% at 80% -10%, #2a3346 0%, var(--night) 55%);
+    color: #fff;
+    padding: clamp(3rem, 5vw, 5rem) 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-hero::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: radial-gradient(40% 60% at 88% 20%, rgba(255,214,107,.18), transparent 70%);
+    pointer-events: none;
+  }
+  .page-hero .wrap { position: relative; }
+  .eyebrow { display: inline-flex; align-items: center; gap: .5rem; font-weight: 700; font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; color: var(--beam); margin-bottom: .8rem; }
+  .page-hero h1 { font-size: var(--display); margin-bottom: 1rem; }
+  .page-hero h1 em { font-style: normal; color: var(--beam); }
+  .page-hero .lead { font-size: clamp(1.05rem, .95rem + .5vw, 1.25rem); color: #c8cfda; max-width: 40ch; }
+
+  /* content */
+  .content { padding-block: var(--section); }
+
+  .reward-cards {
+    display: grid;
+    gap: 1.2rem;
+    margin-bottom: 2.8rem;
+  }
+  @media (min-width: 600px) { .reward-cards { grid-template-columns: 1fr 1fr; } }
+
+  .reward-card {
+    background: var(--paper-2);
+    border: 2px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.8rem 1.6rem;
+    transition: transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s var(--ease);
+  }
+  .reward-card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(0,0,0,.08); }
+  .reward-card.amber { border-color: var(--beam-strong); box-shadow: 0 8px 28px rgba(255,191,61,.15); }
+  .reward-card .amount { font-size: 2.6rem; font-weight: 800; letter-spacing: -.03em; color: var(--ink); margin-bottom: .3rem; }
+  .reward-card.amber .amount { color: #7a5500; }
+  .reward-card .label { font-weight: 700; font-size: 1rem; margin-bottom: .4rem; }
+  .reward-card .desc { color: var(--muted); font-size: .95rem; }
+
+  .divider-rule {
+    border: none;
+    border-top: 2px solid var(--beam-strong);
+    width: 48px;
+    margin: 2.4rem 0;
+  }
+
+  .steps-block { margin-bottom: 2.8rem; }
+  .steps-block h2 { font-size: var(--h2); margin-bottom: 1.6rem; }
+
+  .steps-list { display: grid; gap: 1rem; counter-reset: s; }
+  .step-item {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: 1rem;
+    align-items: start;
+    background: var(--paper-2);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.4rem;
+  }
+  .step-num {
+    counter-increment: s;
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: var(--night);
+    color: #fff;
+    display: grid; place-items: center;
+    font-weight: 800; font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  .step-item h3 { font-size: 1.05rem; margin-bottom: .25rem; }
+  .step-item p { color: var(--muted); font-size: .96rem; }
+
+  .policy-block { margin-bottom: 2.4rem; }
+  .policy-block h2 { font-size: var(--h2); margin-bottom: 1.2rem; }
+  .policy-block p { color: #3a414c; margin-bottom: .8rem; max-width: 60ch; }
+  .policy-block p:last-child { margin-bottom: 0; }
+
+  .notice-box {
+    background: var(--paper-2);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--beam-strong);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 1.2rem 1.4rem;
+    color: #3a414c;
+    font-size: .97rem;
+    max-width: 58ch;
+    margin-top: 1.6rem;
+  }
+
+  .cta-band {
+    background: radial-gradient(120% 120% at 20% 0%, #24304a, var(--night));
+    color: #fff;
+    text-align: center;
+    padding-block: clamp(3rem, 4vw, 5rem);
+  }
+  .cta-band h2 { font-size: var(--h2); margin-bottom: .8rem; }
+  .cta-band p { color: #c8cfda; max-width: 42ch; margin: 0 auto 1.8rem; }
+  .cta-band .cta-row { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; }
+
+  /* footer */
+  footer.site { background: var(--ink); color: #aab2be; padding: 2.4rem 0 6rem; font-size: .9rem; }
+  footer.site .wrap { display: grid; gap: 1rem; }
+  footer .brand { color: #fff; min-height: 44px; padding-block: 6px; }
+  footer a { color: var(--beam); text-decoration: underline; text-underline-offset: 2px; }
+  footer a[href^="tel:"], footer a[href^="mailto:"] { display: inline-block; padding-block: 12px; min-height: 44px; line-height: 1.25; }
+  footer .legal { font-size: .78rem; color: #9aa4b2; max-width: 60ch; }
+
+  /* sticky mobile call bar */
+  .callbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: flex; gap: .5rem; padding: .6rem; background: rgba(16,20,28,.95); backdrop-filter: blur(8px); border-top: 1px solid rgba(255,255,255,.1); }
+  .callbar .btn { flex: 1; justify-content: center; padding: .8rem; }
+  @media (min-width: 820px) { .callbar { display: none; } }
+
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <picture>
+        <source srcset="/logo-header.webp" type="image/webp">
+        <img src="/logo-header.png" alt="Panhandle Headlight Restoration" width="83" height="60" class="brand-logo" />
+      </picture>
+      <span class="brand-text"><span class="brand-name">Panhandle Headlight Restoration</span><small>Mobile &middot; Marianna, FL</small></span>
+    </a>
+    <nav aria-label="Primary">
+      <a href="/#why">Why us</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#how">How it works</a>
+      <a href="/#area">Service area</a>
+      <a href="/#quote">Quote</a>
+    </nav>
+    <a class="btn btn-primary head-cta" href="tel:+18505836322">Call now</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">Referral Program</p>
+      <h1>Spread the word.<br><em>Get paid for it.</em></h1>
+      <p class="lead">Refer a friend or neighbor and earn a thank-you when their job is done. No apps, no tracking links.</p>
+    </div>
+  </section>
+
+  <section class="content">
+    <div class="wrap">
+
+      <div class="reward-cards">
+        <div class="reward-card">
+          <div class="amount">$10</div>
+          <div class="label">Cash thank-you</div>
+          <div class="desc">Sent by Venmo, Zelle, or check within 7 days of your referral's completed job.</div>
+        </div>
+        <div class="reward-card amber">
+          <div class="amount">$15</div>
+          <div class="label">Credit option</div>
+          <div class="desc">Apply it toward your next restoration instead. Worth more if you plan to book again.</div>
+        </div>
+      </div>
+
+      <hr class="divider-rule" />
+
+      <div class="steps-block">
+        <h2>How it works</h2>
+        <div class="steps-list">
+          <div class="step-item">
+            <div class="step-num">1</div>
+            <div>
+              <h3>Give your friend a card or share our number</h3>
+              <p>Hand them one of our referral cards, or just pass along (850) 583-6322. Either way works.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">2</div>
+            <div>
+              <h3>Ask them to mention your name when they book</h3>
+              <p>That's all the tracking we need. No codes, no links, no apps.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">3</div>
+            <div>
+              <h3>We reach out after their job is complete</h3>
+              <p>We'll contact you with your $10 cash or $15 credit — your choice. Paid within 7 days.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider-rule" />
+
+      <div class="policy-block">
+        <h2>The details</h2>
+        <p>Your referral must complete a paid headlight restoration job for the thank-you to apply. No minimum spend beyond the standard service price.</p>
+        <p>You choose cash ($10 via Venmo, Zelle, or check) or credit ($15 toward your next booking) when we reach out. No expiration on credit while we are operating in your area.</p>
+        <p>This program is not tied to Google reviews. You are welcome to leave a review if you would like, but it has no effect on this offer in either direction.</p>
+        <div class="notice-box">
+          No limit on how many friends you can refer. Each completed job counts as one thank-you. We handle all payouts manually and will contact you directly.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>Ready to book or refer a friend?</h2>
+      <p>Call or text us. We serve 32 cities across the Florida Panhandle, South Alabama, and Southwest Georgia.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="tel:+18505836322">(850) 583-6322</a>
+        <a class="btn btn-ghost" href="/#quote">Get a free quote</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <picture>
+        <source srcset="/logo-header.webp" type="image/webp">
+        <img src="/logo-header.png" alt="Panhandle Headlight Restoration" width="83" height="60" class="brand-logo" />
+      </picture>
+    </a>
+    <p>
+      <a href="tel:+18505836322">(850) 583-6322</a> &middot;
+      <a href="mailto:info@panhandleheadlights.com">info@panhandleheadlights.com</a>
+    </p>
+    <p><a href="/referral/">Referral Program</a></p>
+    <p class="legal">Panhandle Headlight Restoration, LLC &middot; Marianna, Florida &middot; Serving the FL Panhandle, South AL &amp; SW GA</p>
+  </div>
+</footer>
+
+<div class="callbar" role="region" aria-label="Quick contact">
+  <a class="btn btn-primary" href="tel:+18505836322">Call (850) 583-6322</a>
+  <a class="btn btn-dark" href="sms:+18505836322">Text us</a>
+</div>
+
+</body>
+</html>
