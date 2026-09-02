@@ -4,14 +4,15 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Referral Program | Panhandle Headlight Restoration</title>
-<meta name="description" content="Refer a friend to Panhandle Headlight Restoration and earn $10 cash or $15 credit toward your next restoration. No apps, no tracking links." />
+<meta name="description" content="Refer a friend to Panhandle Headlight Restoration and earn $10 by PayPal, Venmo, or account credit. No apps, no tracking links." />
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Referral Program | Panhandle Headlight Restoration" />
-<meta property="og:description" content="Refer a friend and earn $10 cash or $15 credit. No apps, no tracking links." />
+<meta property="og:description" content="Refer a friend and earn $10 by PayPal, Venmo, or account credit." />
+<meta property="og:image" content="https://panhandleheadlights.com/og-image.jpg" />
 <meta property="og:url" content="https://panhandleheadlights.com/referral/" />
 <style>
   :root {
@@ -26,6 +27,7 @@
     --beam-strong: #ffbf3d;
     --trust: #2f7de1;
     --good: #1f9d63;
+    --navy: #0e1d3a;
     --display: clamp(2.2rem, 1.1rem + 5vw, 4rem);
     --h2: clamp(1.6rem, 1rem + 2.2vw, 2.4rem);
     --h3: clamp(1.1rem, 0.9rem + 0.8vw, 1.4rem);
@@ -61,9 +63,10 @@
   .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(255,191,61,.5); }
   .btn-ghost { border-color: rgba(255,255,255,.35); color: #fff; }
   .btn-ghost:hover { background: rgba(255,255,255,.08); transform: translateY(-2px); }
+  .btn-dark { background: var(--ink); color: #fff; }
+  .btn-dark:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,.25); }
   :focus-visible { outline: 3px solid var(--trust); outline-offset: 3px; }
 
-  /* header */
   header.site {
     position: sticky; top: 0; z-index: 50;
     background: rgba(16,20,28,.85); backdrop-filter: blur(10px);
@@ -85,7 +88,6 @@
     header .head-cta { display: inline-flex; }
   }
 
-  /* hero band */
   .page-hero {
     background: radial-gradient(120% 90% at 80% -10%, #2a3346 0%, var(--night) 55%);
     color: #fff;
@@ -103,31 +105,23 @@
   .eyebrow { display: inline-flex; align-items: center; gap: .5rem; font-weight: 700; font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; color: var(--beam); margin-bottom: .8rem; }
   .page-hero h1 { font-size: var(--display); margin-bottom: 1rem; }
   .page-hero h1 em { font-style: normal; color: var(--beam); }
-  .page-hero .lead { font-size: clamp(1.05rem, .95rem + .5vw, 1.25rem); color: #c8cfda; max-width: 40ch; }
+  .page-hero .lead { font-size: clamp(1.05rem, .95rem + .5vw, 1.25rem); color: #c8cfda; max-width: 40ch; margin-bottom: 1.6rem; }
+  .page-hero .cta-row { display: flex; flex-wrap: wrap; gap: .8rem; }
 
-  /* content */
   .content { padding-block: var(--section); }
 
-  .reward-cards {
-    display: grid;
-    gap: 1.2rem;
-    margin-bottom: 2.8rem;
-  }
-  @media (min-width: 600px) { .reward-cards { grid-template-columns: 1fr 1fr; } }
-
-  .reward-card {
+  .reward-hero {
     background: var(--paper-2);
-    border: 2px solid var(--line);
+    border: 2px solid var(--beam-strong);
     border-radius: var(--radius);
-    padding: 1.8rem 1.6rem;
-    transition: transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s var(--ease);
+    padding: 2rem 1.6rem;
+    text-align: center;
+    box-shadow: 0 12px 32px rgba(255,191,61,.18);
+    margin-bottom: 2.4rem;
   }
-  .reward-card:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(0,0,0,.08); }
-  .reward-card.amber { border-color: var(--beam-strong); box-shadow: 0 8px 28px rgba(255,191,61,.15); }
-  .reward-card .amount { font-size: 2.6rem; font-weight: 800; letter-spacing: -.03em; color: var(--ink); margin-bottom: .3rem; }
-  .reward-card.amber .amount { color: #7a5500; }
-  .reward-card .label { font-weight: 700; font-size: 1rem; margin-bottom: .4rem; }
-  .reward-card .desc { color: var(--muted); font-size: .95rem; }
+  .reward-hero .amount { font-size: 3.2rem; font-weight: 800; letter-spacing: -.03em; color: #7a5500; line-height: 1; margin-bottom: .4rem; }
+  .reward-hero .label { font-weight: 800; font-size: 1.15rem; margin-bottom: .4rem; }
+  .reward-hero .desc { color: var(--muted); font-size: 1rem; max-width: 42ch; margin-inline: auto; }
 
   .divider-rule {
     border: none;
@@ -154,7 +148,7 @@
     counter-increment: s;
     width: 44px; height: 44px;
     border-radius: 50%;
-    background: var(--night);
+    background: var(--navy);
     color: #fff;
     display: grid; place-items: center;
     font-weight: 800; font-size: 1.1rem;
@@ -180,6 +174,70 @@
     margin-top: 1.6rem;
   }
 
+  /* form section */
+  .form-section {
+    background: var(--paper-2);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: clamp(1.6rem, 3vw, 2.4rem);
+    box-shadow: 0 8px 24px rgba(0,0,0,.05);
+    scroll-margin-top: 90px;
+  }
+  .form-section h2 { font-size: var(--h2); margin-bottom: .5rem; }
+  .form-section .hint { font-size: .95rem; color: var(--muted); margin-bottom: 1.6rem; }
+
+  .fieldset-label {
+    display: block;
+    font-size: .78rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--navy); margin-bottom: .8rem;
+  }
+
+  .qform { display: grid; gap: 1rem; }
+  .qform label { display: grid; gap: .35rem; font-weight: 600; font-size: .92rem; color: #3a414c; }
+  .qform label .req { color: #b23c3c; }
+  .qform input, .qform select, .qform textarea {
+    font: inherit; padding: .75rem .85rem;
+    border: 1px solid var(--line); border-radius: 10px;
+    background: #fff; color: var(--ink); width: 100%;
+  }
+  .qform input:focus, .qform select:focus, .qform textarea:focus {
+    outline: 2px solid var(--trust); border-color: var(--trust);
+  }
+  .qform .frow { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+  @media (min-width: 560px) { .qform .frow { grid-template-columns: 1fr 1fr; } }
+  .qform .hp { position: absolute; left: -9999px; }
+  .qform textarea { min-height: 100px; resize: vertical; }
+  .qform-submit {
+    display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+    font-weight: 700; font-size: 1.05rem;
+    padding: 1rem 1.6rem; border-radius: 999px;
+    border: 2px solid transparent; cursor: pointer;
+    background: var(--beam-strong); color: #241a00;
+    box-shadow: 0 8px 24px rgba(255,191,61,.35);
+    width: 100%; margin-top: 1.4rem;
+    transition: transform .2s var(--ease), box-shadow .2s var(--ease);
+  }
+  .qform-submit:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(255,191,61,.5); }
+
+  .form-divider {
+    border: 0; border-top: 1px dashed var(--line);
+    margin: 1.6rem 0;
+  }
+
+  .disclosure {
+    margin-top: 1.6rem; padding: 1.2rem 1.4rem;
+    background: #fff8e6; border-left: 4px solid var(--beam-strong);
+    border-radius: 0 8px 8px 0;
+    font-size: .88rem; color: #4a4437; line-height: 1.5;
+  }
+  .disclosure b { color: var(--ink); }
+
+  .success {
+    background: #e8f7ee; border: 1px solid var(--good);
+    color: #145a37; padding: 1.4rem 1.6rem; border-radius: 12px;
+    margin-bottom: 1.5rem; font-weight: 600;
+  }
+
   .cta-band {
     background: radial-gradient(120% 120% at 20% 0%, #24304a, var(--night));
     color: #fff;
@@ -190,7 +248,6 @@
   .cta-band p { color: #c8cfda; max-width: 42ch; margin: 0 auto 1.8rem; }
   .cta-band .cta-row { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; }
 
-  /* footer */
   footer.site { background: var(--ink); color: #aab2be; padding: 2.4rem 0 6rem; font-size: .9rem; }
   footer.site .wrap { display: grid; gap: 1rem; }
   footer .brand { color: #fff; min-height: 44px; padding-block: 6px; }
@@ -198,7 +255,6 @@
   footer a[href^="tel:"], footer a[href^="mailto:"] { display: inline-block; padding-block: 12px; min-height: 44px; line-height: 1.25; }
   footer .legal { font-size: .78rem; color: #9aa4b2; max-width: 60ch; }
 
-  /* sticky mobile call bar */
   .callbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: flex; gap: .5rem; padding: .6rem; background: rgba(16,20,28,.95); backdrop-filter: blur(8px); border-top: 1px solid rgba(255,255,255,.1); }
   .callbar .btn { flex: 1; justify-content: center; padding: .8rem; }
   @media (min-width: 820px) { .callbar { display: none; } }
@@ -234,24 +290,20 @@
     <div class="wrap">
       <p class="eyebrow">Referral Program</p>
       <h1>Spread the word.<br><em>Get paid for it.</em></h1>
-      <p class="lead">Refer a friend or neighbor and earn a thank-you when their job is done. No apps, no tracking links.</p>
+      <p class="lead">Refer a friend or neighbor to Panhandle Headlight Restoration. When their restoration is complete and paid, you get $10 as thanks.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#book">I was referred &mdash; book my restoration</a>
+      </div>
     </div>
   </section>
 
   <section class="content">
     <div class="wrap">
 
-      <div class="reward-cards">
-        <div class="reward-card">
-          <div class="amount">$10</div>
-          <div class="label">Cash thank-you</div>
-          <div class="desc">Sent by Venmo, Zelle, or check within 7 days of your referral's completed job.</div>
-        </div>
-        <div class="reward-card amber">
-          <div class="amount">$15</div>
-          <div class="label">Credit option</div>
-          <div class="desc">Apply it toward your next restoration instead. Worth more if you plan to book again.</div>
-        </div>
+      <div class="reward-hero">
+        <div class="amount">$10</div>
+        <div class="label">Per paid referral</div>
+        <div class="desc">Sent by PayPal or Venmo, or applied as account credit toward your next restoration. Your choice.</div>
       </div>
 
       <hr class="divider-rule" />
@@ -263,21 +315,21 @@
             <div class="step-num">1</div>
             <div>
               <h3>Give your friend a card or share our number</h3>
-              <p>Hand them one of our referral cards, or just pass along (850) 583-6322. Either way works.</p>
+              <p>Hand them one of our referral cards, share (850) 583-6322, or send them straight to this page. Either way works.</p>
             </div>
           </div>
           <div class="step-item">
             <div class="step-num">2</div>
             <div>
-              <h3>Ask them to mention your name when they book</h3>
-              <p>That's all the tracking we need. No codes, no links, no apps.</p>
+              <h3>They fill out the form below (or mention your name when they call)</h3>
+              <p>The form captures who referred them so there is no dispute later. If they call instead, just make sure they say your name.</p>
             </div>
           </div>
           <div class="step-item">
             <div class="step-num">3</div>
             <div>
-              <h3>We reach out after their job is complete</h3>
-              <p>We'll contact you with your $10 cash or $15 credit — your choice. Paid within 7 days.</p>
+              <h3>You get $10 after their restoration is complete and paid</h3>
+              <p>Payment goes out within 72 hours of their payment clearing. PayPal, Venmo, or account credit &mdash; your choice.</p>
             </div>
           </div>
         </div>
@@ -285,13 +337,93 @@
 
       <hr class="divider-rule" />
 
+      <section id="book" class="form-section">
+
+        <div id="success" class="success" style="display:none;">
+          Thanks! I&rsquo;ll text you within 24 hours to schedule. Your friend will get their $10 after your restoration is complete and paid.
+        </div>
+
+        <h2>Were you referred? Book here.</h2>
+        <p class="hint">Takes 60 seconds. I reply within 24 hours.</p>
+
+        <form id="referralForm" name="referral" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/referral/?success=1">
+          <input type="hidden" name="form-name" value="referral" />
+          <p class="hp"><label>Leave this blank: <input name="bot-field" /></label></p>
+
+          <span class="fieldset-label">Who referred you</span>
+          <div class="qform">
+            <div class="frow">
+              <label>
+                Friend&rsquo;s name <span class="req">*</span>
+                <input type="text" name="referrer_name" required autocomplete="off" placeholder="John Smith" />
+              </label>
+              <label>
+                Friend&rsquo;s phone <span class="req">*</span>
+                <input type="tel" name="referrer_phone" required autocomplete="off" placeholder="(850) 555-0123" />
+              </label>
+            </div>
+          </div>
+
+          <hr class="form-divider" />
+
+          <span class="fieldset-label">Your info</span>
+          <div class="qform">
+            <div class="frow">
+              <label>
+                Your name <span class="req">*</span>
+                <input type="text" name="friend_name" required autocomplete="name" placeholder="Jane Doe" />
+              </label>
+              <label>
+                Your phone <span class="req">*</span>
+                <input type="tel" name="friend_phone" required autocomplete="tel" placeholder="(850) 555-0456" />
+              </label>
+            </div>
+            <label>
+              Your email
+              <input type="email" name="friend_email" autocomplete="email" placeholder="you@example.com" />
+            </label>
+            <div class="frow">
+              <label>
+                City <span class="req">*</span>
+                <input type="text" name="friend_city" required autocomplete="address-level2" placeholder="Marianna" />
+              </label>
+              <label>
+                ZIP <span class="req">*</span>
+                <input type="text" name="friend_zip" required inputmode="numeric" pattern="[0-9]{5}" maxlength="5" autocomplete="postal-code" placeholder="32446" />
+              </label>
+            </div>
+            <label>
+              Vehicle (year, make, model)
+              <input type="text" name="vehicle" placeholder="2015 Honda Civic" />
+            </label>
+            <label>
+              Preferred day / time
+              <input type="text" name="preferred_time" placeholder="Weekday afternoons, weekend morning, etc." />
+            </label>
+            <label>
+              Anything else I should know?
+              <textarea name="notes" placeholder="Both headlights foggy, one has a crack, etc."></textarea>
+            </label>
+          </div>
+
+          <button class="qform-submit" type="submit">Send my info</button>
+        </form>
+
+        <div class="disclosure">
+          <b>What this is:</b> A referral thank-you. When you complete a paid headlight restoration, the person who referred you gets $10 as thanks. There is no cost to you and no obligation. Your price is the same whether you use a referral or not. Payment is made 72 hours after your job is complete and paid (chargeback safety window). If you were not referred by anyone, please use the <a href="/#quote">standard quote form</a> instead.
+        </div>
+
+      </section>
+
+      <hr class="divider-rule" />
+
       <div class="policy-block">
         <h2>The details</h2>
-        <p>Your referral must complete a paid headlight restoration job for the thank-you to apply. No minimum spend beyond the standard service price.</p>
-        <p>You choose cash ($10 via Venmo, Zelle, or check) or credit ($15 toward your next booking) when we reach out. No expiration on credit while we are operating in your area.</p>
+        <p>Your referral must complete a paid headlight restoration for the thank-you to apply. No minimum spend beyond the standard service price.</p>
+        <p>You choose the payout method &mdash; PayPal, Venmo, or account credit toward your next booking. Account credit does not expire while we operate in your area.</p>
         <p>This program is not tied to Google reviews. You are welcome to leave a review if you would like, but it has no effect on this offer in either direction.</p>
         <div class="notice-box">
-          No limit on how many friends you can refer. Each completed job counts as one thank-you. We handle all payouts manually and will contact you directly.
+          No limit on how many friends you can refer. Each completed paid restoration counts as one $10 thank-you. All payouts are handled manually and we contact you directly.
         </div>
       </div>
 
@@ -332,6 +464,14 @@
   <a class="btn btn-primary" href="tel:+18505836322">Call (850) 583-6322</a>
   <a class="btn btn-dark" href="sms:+18505836322">Text us</a>
 </div>
+
+<script>
+  if (new URLSearchParams(window.location.search).get('success') === '1') {
+    document.getElementById('success').style.display = 'block';
+    document.getElementById('referralForm').style.display = 'none';
+    document.getElementById('success').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+</script>
 
 </body>
 </html>
