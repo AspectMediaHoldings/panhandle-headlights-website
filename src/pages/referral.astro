@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CtaBand from '../components/CtaBand.astro';
+---
+<BaseLayout
+  title="Referral Program | Panhandle Headlight Restoration"
+  description="Refer a friend to Panhandle Headlight Restoration. They get 10% off, you get $10 &mdash; a two-way thank-you."
+>
+  <section class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Referral program</span>
+      <h2>Refer a friend. Both of you win.</h2>
+      <p>Send someone our way and it pays both directions. They get 10% off their restoration; you get $10 as a thank-you.</p>
+    </div>
+
+    <div class="tiers">
+      <div class="card">
+        <h3 style="font-size:var(--h3);">For your friend</h3>
+        <p style="color:var(--muted);margin-top:.5rem;"><strong>10% off</strong> their headlight restoration. Applied to the pre-tax subtotal at time of service. Works on any tier.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:var(--h3);">For you</h3>
+        <p style="color:var(--muted);margin-top:.5rem;"><strong>$10 thank-you</strong>, delivered 72 hours after the friend&rsquo;s payment clears. PayPal, Venmo, or account credit toward your next booking.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:var(--h3);">No limit</h3>
+        <p style="color:var(--muted);margin-top:.5rem;">Refer as many friends as you want. Each completed paid restoration counts as one referral. All payouts handled manually.</p>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:2rem;padding:1.6rem;">
+      <h3 style="font-size:var(--h3);margin-bottom:.6rem;">The details</h3>
+      <p style="color:var(--muted);margin-bottom:.6rem;">Your referral must complete a paid headlight restoration for both benefits to apply. The 10% discount is applied to their invoice at time of service. The $10 thank-you goes to the referrer 72 hours after the friend&rsquo;s payment clears.</p>
+      <p style="color:var(--muted);margin-bottom:.6rem;">Referrer payout method &mdash; PayPal, Venmo, or account credit toward your next booking. Account credit does not expire while we operate in your area.</p>
+      <p style="color:var(--muted);margin-bottom:.6rem;">The 10% discount applies to the pre-tax subtotal. Does not stack with other promotional discounts (military, veteran, law enforcement, first responder, school employee) &mdash; the customer receives whichever discount is larger.</p>
+      <p style="color:var(--muted);">This program is not tied to Google reviews. You are welcome to leave a review if you would like, but it has no effect on this offer in either direction.</p>
+    </div>
+
+    <div style="text-align:center;margin-top:2.4rem;">
+      <a class="btn btn-primary" href="/quote/">Book your friend&rsquo;s restoration</a>
+    </div>
+  </section>
+
+  <CtaBand />
+</BaseLayout>

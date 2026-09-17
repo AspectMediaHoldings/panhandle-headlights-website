@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TrustStrip from '../components/TrustStrip.astro';
+import BeforeAfterSlider from '../components/BeforeAfterSlider.astro';
+import CtaBand from '../components/CtaBand.astro';
+---
+<BaseLayout
+  title="Panhandle Headlight Restoration | Marianna, FL Mobile Headlight Restoration"
+  description="Mobile headlight restoration in Marianna and the Florida Panhandle. Three coating tiers starting at $80 for cars, $100 for trucks and SUVs. Professional hard coats rated for Florida UV. 6 to 18-month guarantee. We come to you."
+  ogTitle="Panhandle Headlight Restoration | Marianna, FL"
+  ogDescription="Mobile headlight restoration in Marianna and the Florida Panhandle. We come to you. Three coating tiers starting at $80 for cars, $100 for trucks and SUVs. 6 to 18-month guarantee."
+>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <picture>
+          <source srcset="/logo-hero.webp" type="image/webp">
+          <img src="/logo-hero.png" alt="Panhandle Headlight Restoration — we come to you" width="800" height="580" class="hero-logo" />
+        </picture>
+        <span class="eyebrow"><span style="width:8px;height:8px;border-radius:50%;background:var(--beam);display:inline-block"></span> Mobile headlight restoration</span>
+        <h1>Foggy headlights, <em>gone for good.</em></h1>
+        <p class="lead">We sand, polish, and seal your lenses with a professional hard coat matched to Florida&rsquo;s extreme UV. Three tiers, three protection levels. We come to you.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="/quote/">Get a free quote</a>
+          <a class="btn btn-ghost" href="/pricing/">See pricing</a>
+        </div>
+        <p class="price-tag"><b>$80&ndash;$150</b> per pair &middot; Serving Marianna, the Panhandle, South AL &amp; SW GA &middot; 6 to 18-month guarantee</p>
+      </div>
+      <div>
+        <BeforeAfterSlider />
+      </div>
+    </div>
+  </section>
+
+  <TrustStrip />
+
+  <!-- WHY teaser -->
+  <section id="why" class="wrap">
+    <div class="split">
+      <div>
+        <div class="sec-head">
+          <span class="eyebrow">Why ours lasts</span>
+          <h2>Most restorations skip the one step that matters.</h2>
+          <p>Sanding out the yellow is the easy part. If the lens is not sealed properly afterward, the bare plastic starts hazing again within months. That is the cheap job you have seen before. We do it the durable way.</p>
+        </div>
+        <div class="cta-row" style="margin-top:1rem;gap:.8rem;">
+          <a class="btn btn-dark" href="/services/">How we do it</a>
+          <a class="btn btn-primary" href="/pricing/">See pricing</a>
+        </div>
+      </div>
+      <div class="why-list">
+        <div class="card"><div class="ic">1</div><div><h3>Wet-sanded right</h3><p>A proper grit progression removes the oxidation without gouging the lens.</p></div></div>
+        <div class="card"><div class="ic">2</div><div><h3>Sealed for Florida UV</h3><p>Florida&rsquo;s UV index runs 10&ndash;11 year-round&mdash;twice the northern US average. We use professional hard coats rated for that exposure.</p></div></div>
+        <div class="card"><div class="ic">3</div><div><h3>A fraction of replacement</h3><p>New headlights run $250 to $750 each, more for LED. We restore for far less.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand />
+
+</BaseLayout>

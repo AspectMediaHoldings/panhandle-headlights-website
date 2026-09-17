@@ -1,0 +1,29 @@
+---
+const pathname = Astro.url.pathname;
+const links = [
+  { href: '/services/', label: 'Services' },
+  { href: '/pricing/', label: 'Pricing' },
+  { href: '/service-area/', label: 'Service area' },
+  { href: '/gallery/', label: 'Gallery' },
+  { href: '/quote/', label: 'Quote' },
+  { href: '/about/', label: 'About' },
+];
+const isCurrent = (href: string) => pathname === href || pathname === href.replace(/\/$/, '');
+---
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <picture>
+        <source srcset="/logo-header.webp" type="image/webp">
+        <img src="/logo-header.png" alt="Panhandle Headlight Restoration" width="83" height="60" class="brand-logo" />
+      </picture>
+      <span class="brand-text"><span class="brand-name">Panhandle Headlight Restoration</span><small>Mobile · Marianna, FL</small></span>
+    </a>
+    <nav aria-label="Primary">
+      {links.map(({ href, label }) => (
+        <a href={href} aria-current={isCurrent(href) ? 'page' : undefined}>{label}</a>
+      ))}
+    </nav>
+    <a class="btn btn-primary head-cta" href="tel:+18505836322">Call now</a>
+  </div>
+</header>

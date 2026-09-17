@@ -1,0 +1,120 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import MobileCallBar from '../components/MobileCallBar.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  canonical?: string;
+}
+
+const { title, description, ogTitle, ogDescription, canonical } = Astro.props;
+const site = 'https://panhandleheadlights.com';
+const url = canonical || site + Astro.url.pathname;
+
+const businessSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://panhandleheadlights.com/#org',
+      name: 'Aspect Media Holdings, LLC',
+      url: 'https://panhandleheadlights.com/',
+    },
+    {
+      '@type': ['LocalBusiness', 'AutoDetailing'],
+      '@id': 'https://panhandleheadlights.com/#business',
+      name: 'Panhandle Headlights',
+      alternateName: 'Panhandle Headlight Restoration',
+      url: 'https://panhandleheadlights.com/',
+      telephone: '+1-850-583-6322',
+      email: 'info@panhandleheadlights.com',
+      image: 'https://panhandleheadlights.com/logo-hero.png',
+      priceRange: '$80-$150',
+      description: 'Mobile headlight restoration in Marianna and the Florida Panhandle. Three professional coating tiers with guarantees from 6 to 18 months.',
+      parentOrganization: { '@id': 'https://panhandleheadlights.com/#org' },
+      areaServed: [
+        { '@type': 'City', name: 'Marianna, FL' },
+        { '@type': 'City', name: 'Cottondale, FL' },
+        { '@type': 'City', name: 'Chipley, FL' },
+        { '@type': 'City', name: 'Bonifay, FL' },
+        { '@type': 'City', name: 'Blountstown, FL' },
+        { '@type': 'City', name: 'Panama City, FL' },
+        { '@type': 'City', name: 'Tallahassee, FL' },
+        { '@type': 'City', name: 'Dothan, AL' },
+        { '@type': 'City', name: 'Bainbridge, GA' },
+        { '@type': 'AdministrativeArea', name: 'Florida Panhandle' },
+      ],
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Headlight Restoration Coating Tiers',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            name: 'Clear — Entry Seal',
+            description: '3M Professional Clear Coat. 6-month guarantee.',
+            priceSpecification: [
+              { '@type': 'PriceSpecification', price: '80', priceCurrency: 'USD', description: 'Car' },
+              { '@type': 'PriceSpecification', price: '100', priceCurrency: 'USD', description: 'Truck or SUV' },
+            ],
+          },
+          {
+            '@type': 'Offer',
+            name: 'Clear Pro — Mid Tier',
+            description: 'Delta Kits Infinity Liquid Coating. 12-month guarantee.',
+            priceSpecification: [
+              { '@type': 'PriceSpecification', price: '100', priceCurrency: 'USD', description: 'Car' },
+              { '@type': 'PriceSpecification', price: '125', priceCurrency: 'USD', description: 'Truck or SUV' },
+            ],
+          },
+          {
+            '@type': 'Offer',
+            name: 'Clear Shield — Top Tier',
+            description: 'GlasWeld COAT UV-Cured Hard Coat. 18-month guarantee.',
+            priceSpecification: [
+              { '@type': 'PriceSpecification', price: '120', priceCurrency: 'USD', description: 'Car' },
+              { '@type': 'PriceSpecification', price: '150', priceCurrency: 'USD', description: 'Truck or SUV' },
+            ],
+          },
+        ],
+      },
+    },
+  ],
+};
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={url} />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={ogTitle || title} />
+  <meta property="og:description" content={ogDescription || description} />
+  <meta property="og:image" content="https://panhandleheadlights.com/og-image.jpg" />
+  <meta property="og:url" content={url} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
+  <slot name="head" />
+</head>
+<body>
+  <Header />
+  <main id="top">
+    <slot />
+  </main>
+  <Footer />
+  <MobileCallBar />
+</body>
+</html>

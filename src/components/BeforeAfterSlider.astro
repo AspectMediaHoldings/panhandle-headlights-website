@@ -1,0 +1,21 @@
+<div class="ba" id="ba">
+  <div class="ba-layer ba-after"></div>
+  <div class="ba-layer ba-before" id="baBefore"></div>
+  <span class="ba-tag left">BEFORE</span>
+  <span class="ba-tag right">AFTER</span>
+  <div class="ba-handle" id="baHandle"><span class="ba-knob"></span></div>
+  <input type="range" min="0" max="100" value="50" id="baRange" aria-label="Drag to compare before and after" />
+</div>
+
+<script is:inline>
+  (function () {
+    var range = document.getElementById('baRange');
+    var before = document.getElementById('baBefore');
+    var handle = document.getElementById('baHandle');
+    function set(v) {
+      before.style.clipPath = 'inset(0 ' + (100 - v) + '% 0 0)';
+      handle.style.left = v + '%';
+    }
+    if (range) { range.addEventListener('input', function () { set(this.value); }); set(50); }
+  })();
+</script>

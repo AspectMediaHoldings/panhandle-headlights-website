@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CtaBand from '../components/CtaBand.astro';
+
+const faq = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': 'https://panhandleheadlights.com/services/#faq',
+  mainEntity: [
+    { '@type': 'Question', name: 'How long does headlight restoration last in Florida?', acceptedAnswer: { '@type': 'Answer', text: "Florida's UV index runs 10 to 11 year-round, about twice the northern US average. A basic wipe-on clear coat lasts about 6 months here. A liquid coating with UV stabilizers lasts 12 months. A UV-cured hard coat lasts 18 months. All three carry a matching guarantee: if it hazes inside that window, we re-do it." } },
+    { '@type': 'Question', name: 'How much does headlight restoration cost?', acceptedAnswer: { '@type': 'Answer', text: '$80 per pair for cars on the entry tier; $100 for trucks and SUVs. Mid tier is $100 car and $125 truck. Top tier is $120 car and $150 truck. Severe oxidation adds $15 to $30, quoted on-site before we start.' } },
+    { '@type': 'Question', name: 'Do you come to me?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. We are 100% mobile. Free service within about 30 miles of Marianna. 30 to 50 miles: $25 trip fee. Beyond that a travel surcharge applies, and multi-vehicle or dealer batches are preferred.' } },
+    { '@type': 'Question', name: 'What is the difference between the three coatings?', acceptedAnswer: { '@type': 'Answer', text: 'Clear uses 3M Professional Clear Coat, a UV-resistant wipe that lasts about 6 months in Florida sun. Clear Pro uses Delta Kits Infinity Liquid Coating, a thicker water-based polyurethane with UV stabilizers that lasts 12 to 18 months. Clear Shield uses GlasWeld COAT UV-Cured Hard Coat, the OEM-grade coating cured with a UV lamp so it bonds hard to the polycarbonate, matching factory chemistry.' } },
+    { '@type': 'Question', name: 'Can I do it myself with a kit?', acceptedAnswer: { '@type': 'Answer', text: 'You can. Retail kits handle the sanding and polishing well. Most do not include a UV-rated sealant, and in Florida the results haze back within a few months without one. If you want the sanded result to stay clear, the sealant is the step that matters.' } },
+  ],
+};
+---
+<BaseLayout
+  title="Services & Process | Panhandle Headlight Restoration"
+  description="How we restore headlights in the Florida Panhandle: wet-sand, polish, then seal with a coating chosen for Florida UV. Three tiers with guarantees from 6 to 18 months."
+>
+  <script slot="head" type="application/ld+json" set:html={JSON.stringify(faq)} />
+
+  <section class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Services & process</span>
+      <h2>How we restore headlights that stay clear.</h2>
+      <p>Sanding out the yellow is the easy part. If the lens is not sealed properly afterward, the bare plastic starts hazing again within months. We do it the durable way.</p>
+    </div>
+
+    <div class="why-list" style="max-width:820px;">
+      <div class="card"><div class="ic">1</div><div><h3>Wet-sanded right</h3><p>A proper grit progression removes the oxidation without gouging the lens. We inspect between grits so each pass fully clears the last one's scratches.</p></div></div>
+      <div class="card"><div class="ic">2</div><div><h3>Sealed for Florida UV</h3><p>Florida&rsquo;s UV index runs 10&ndash;11 year-round&mdash;twice the northern US average. We use professional hard coats rated for that exposure, matched to how long you need results to last.</p></div></div>
+      <div class="card"><div class="ic">3</div><div><h3>A fraction of replacement</h3><p>New headlights run $250 to $750 each, more for LED. We restore for far less, with before/after photos and a written guarantee.</p></div></div>
+    </div>
+  </section>
+
+  <section id="how" class="wrap" style="padding-top:0;">
+    <div class="sec-head">
+      <span class="eyebrow">How it works</span>
+      <h2>Clear headlights in about an hour.</h2>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Text a photo</h3><p>Send a picture of your headlights for a quick quote.</p></div>
+      <div class="step"><h3>We come to you</h3><p>We set up at your home, work, or lot. No need to drive anywhere.</p></div>
+      <div class="step"><h3>Sand, polish, seal</h3><p>Usually 30 to 45 minutes per car, done on the spot.</p></div>
+      <div class="step"><h3>See the difference</h3><p>We show you the before and after, then you pay when it is done.</p></div>
+    </div>
+  </section>
+
+  <section style="background:var(--paper-2);border-block:1px solid var(--line);">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Why coating choice matters here</span>
+        <h2>Florida UV index: 10&ndash;11. Twice what most states get.</h2>
+        <p>Standard headlight coatings are rated for moderate climates. Down here, a coating that lasts two years in Ohio lasts eight months in the Panhandle. We use three different professional coatings&mdash;each chosen for a specific durability window&mdash;so you pay for what you actually need.</p>
+      </div>
+      <div style="display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));">
+        <div class="card" style="padding:1.2rem 1.4rem;">
+          <p style="font-weight:800;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:#8B5A0A;margin-bottom:.4rem;">Clear &mdash; Entry seal</p>
+          <p style="font-weight:700;margin-bottom:.35rem;">3M Professional Clear Coat</p>
+          <p style="color:var(--muted);font-size:.92rem;">A UV-resistant clear coat wipe developed for the professional headlight restoration trade. Fast application, consistent film. Good for 6 months in Florida sun before UV begins breaking through the film.</p>
+        </div>
+        <div class="card" style="padding:1.2rem 1.4rem;">
+          <p style="font-weight:800;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:#8B5A0A;margin-bottom:.4rem;">Clear Pro &mdash; Mid-tier</p>
+          <p style="font-weight:700;margin-bottom:.35rem;">Delta Kits Infinity Liquid Coating</p>
+          <p style="color:var(--muted);font-size:.92rem;">Water-based polyurethane dispersion with nano UV absorbers and HALS stabilizers. Applied as a liquid for a thicker, more uniform film than a wipe-on. Real-world Florida exposure data supports 12&ndash;18 month durability in high-UV markets.</p>
+        </div>
+        <div class="card" style="padding:1.2rem 1.4rem;">
+          <p style="font-weight:800;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:#8B5A0A;margin-bottom:.4rem;">Clear Shield &mdash; Top tier</p>
+          <p style="font-weight:700;margin-bottom:.35rem;">GlasWeld COAT UV-Cured Hard Coat</p>
+          <p style="color:var(--muted);font-size:.92rem;">OEM-grade UV-cured hard coat cured with a UV lamp so it bonds hard to the polycarbonate rather than sitting on top. The same coating chemistry used by vehicle manufacturers from the factory. Longest durability of any wipe-on class product.</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:2rem;">
+        <a class="btn btn-primary" href="/pricing/">See pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Common questions</span>
+      <h2>Straight answers.</h2>
+    </div>
+    <div style="display:grid;gap:1rem;max-width:820px;">
+      {faq.mainEntity.map((q) => (
+        <details class="card" style="padding:1.2rem 1.4rem;">
+          <summary style="font-weight:700;cursor:pointer;font-size:1.05rem;">{q.name}</summary>
+          <p style="margin-top:.6rem;color:var(--muted);">{q.acceptedAnswer.text}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+
+  <CtaBand />
+</BaseLayout>

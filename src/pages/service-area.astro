@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CtaBand from '../components/CtaBand.astro';
+---
+<BaseLayout
+  title="Service Area | Panhandle Headlight Restoration"
+  description="Mobile headlight restoration throughout the Florida Panhandle, South Alabama, and Southwest Georgia. Free within about 30 miles of Marianna."
+>
+  <section class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Service area</span>
+      <h2>Based in Marianna. We travel to you across three states.</h2>
+      <p>Mobile headlight restoration throughout the Florida Panhandle, South Alabama, and Southwest Georgia. Free within about 30 miles of Marianna; a travel fee applies farther out.</p>
+    </div>
+    <div class="tiers">
+      <div class="card">
+        <h3 style="font-size:var(--h3);">Core area &mdash; no trip fee</h3>
+        <p style="color:var(--muted);margin-top:.5rem;">Marianna, Cottondale, Grand Ridge, Sneads, Malone, Graceville, Alford, Campbellton, Greenwood, Bascom (Jackson County) &middot; Chipley &middot; Bonifay &middot; Blountstown &middot; Dothan, AL &middot; Bainbridge, GA.</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:var(--h3);">Florida Panhandle</h3>
+        <p style="color:var(--muted);margin-top:.5rem;">Panama City, Lynn Haven, Tallahassee, Quincy, Port St. Joe, DeFuniak Springs, and the surrounding FL counties (Bay, Gadsden, Leon, Calhoun, Washington, Holmes, Walton, Gulf, Liberty).</p>
+      </div>
+      <div class="card">
+        <h3 style="font-size:var(--h3);">South AL &amp; Southwest GA</h3>
+        <p style="color:var(--muted);margin-top:.5rem;">Dothan, Ozark, Enterprise, Troy, Eufaula (AL) &middot; Bainbridge, Donalsonville, Blakely, Colquitt, Cairo, Thomasville, Albany (GA) &middot; and the counties in between.</p>
+      </div>
+    </div>
+    <p class="fineprint">Not sure if you're in range? Text your location for a quick answer. Longer hauls are welcome for multi-vehicle jobs and dealer lots.</p>
+  </section>
+
+  <CtaBand />
+</BaseLayout>

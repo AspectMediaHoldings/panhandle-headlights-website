@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Get a Free Quote | Panhandle Headlight Restoration"
+  description="Send a couple photos and we'll text you a price for headlight restoration in the Florida Panhandle. Same-day response, no obligation. Secure payment through Stripe."
+>
+  <section class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Free quote</span>
+      <h2>Get your price in minutes.</h2>
+      <p>Send a couple photos of your headlights and we'll text you a quote &mdash; usually the same day. No obligation.</p>
+    </div>
+    <div class="quote-grid">
+      <form name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" class="qform">
+        <input type="hidden" name="form-name" value="quote" />
+        <p class="hp"><label>Leave this blank: <input name="bot-field" /></label></p>
+        <div class="frow">
+          <label>Name<input type="text" name="name" required></label>
+          <label>Phone<input type="tel" name="phone" required></label>
+        </div>
+        <label>Email<input type="email" name="email"></label>
+        <label>Vehicle (year, make, model)<input type="text" name="vehicle" placeholder="2014 Ford F-150"></label>
+        <label>Headlight condition
+          <select name="condition">
+            <option>Light haze</option>
+            <option>Yellowed</option>
+            <option>Heavily oxidized</option>
+            <option>Not sure</option>
+          </select>
+        </label>
+        <label>Photos (optional)<input type="file" name="photos" accept="image/*" multiple></label>
+        <label>Anything else?<textarea name="message" rows="3"></textarea></label>
+        <button class="btn btn-primary" type="submit">Request my free quote</button>
+        <p class="ph-note" style="text-align:left;color:var(--muted);">We reply by text, usually same day. Prefer to text now? Tap the number at the bottom.</p>
+      </form>
+      <aside class="card pay-card">
+        <h3 style="font-size:var(--h3);">Already quoted? Pay online.</h3>
+        <p style="color:var(--muted);margin:.5rem 0 1.2rem;">Secure payment by card or Apple Pay through Stripe. After we quote you, you'll get a secure link by text or email. Booking a slot? Leave a deposit below.</p>
+        <a class="btn btn-dark" href="https://buy.stripe.com/5kQdRa7KF7J0e2SdqX8Ra00" style="width:100%;justify-content:center;">Pay booking deposit</a>
+        <p class="ph-note" style="text-align:left;margin-top:1rem;">Powered by Stripe. Your card details never touch this site.</p>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>

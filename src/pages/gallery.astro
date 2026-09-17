@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CtaBand from '../components/CtaBand.astro';
+---
+<BaseLayout
+  title="Gallery | Panhandle Headlight Restoration"
+  description="Before and after photos from real jobs in Marianna and the Florida Panhandle. Fresh work added weekly."
+>
+  <section class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Recent jobs</span>
+      <h2>Real work, dated.</h2>
+      <p>New before/after photos land here as jobs come in. Every image is a real customer vehicle, with permission, taken the same day.</p>
+    </div>
+
+    <div class="card" style="text-align:center;padding:3rem 1.5rem;max-width:640px;margin:0 auto;">
+      <h3 style="font-size:var(--h3);margin-bottom:.6rem;">First jobs launching soon.</h3>
+      <p style="color:var(--muted);margin-bottom:1.4rem;">Book a slot in launch week and your car may be one of our first before/after posts — with your permission.</p>
+      <div class="cta-row" style="justify-content:center;">
+        <a class="btn btn-primary" href="/quote/">Get a free quote</a>
+        <a class="btn btn-dark" href="tel:+18505836322">Call (850) 583-6322</a>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand />
+</BaseLayout>
