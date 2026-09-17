@@ -5,3 +5,19 @@ Thumbs.db
 *.log
 .env
 .env.local
+
+# print/marketing artifacts (belong in panhandle-print/ or Drive, not the website repo)
+Business Card*
+Color Business Card*
+B&W Business Card*
+Car Magnet*
+CarMagnet-*
+Dealer & Lot Rate Sheet*
+Dealer Rate Sheet*
+Dealerlotratesheet*
+Facebook Cover Photo*
+Graphics/
+Magnet with*
+qr-code*.png
+*.kra
+*.kra~

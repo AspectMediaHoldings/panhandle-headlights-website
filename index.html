@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Panhandle Headlight Restoration | Marianna, FL Mobile Headlight Restoration</title>
-<meta name="description" content="Mobile headlight restoration in Marianna and the Florida Panhandle. Three coating tiers from $80. Professional hard coats rated for Florida UV. 6 to 18-month guarantee. We come to you." />
+<meta name="description" content="Mobile headlight restoration in Marianna and the Florida Panhandle. Three coating tiers starting at $80 for cars, $100 for trucks and SUVs. Professional hard coats rated for Florida UV. 6 to 18-month guarantee. We come to you." />
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Panhandle Headlight Restoration | Marianna, FL" />
-<meta property="og:description" content="Mobile headlight restoration in Marianna and the Florida Panhandle. We come to you. Three coating tiers from $80. 6 to 18-month guarantee." />
+<meta property="og:description" content="Mobile headlight restoration in Marianna and the Florida Panhandle. We come to you. Three coating tiers starting at $80 for cars, $100 for trucks and SUVs. 6 to 18-month guarantee." />
 <meta property="og:image" content="https://panhandleheadlights.com/og-image.jpg" />
 <meta property="og:url" content="https://panhandleheadlights.com/" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -124,7 +124,7 @@
   .ba-layer { position: absolute; inset: 0; background-size: cover; background-position: center; }
   /* placeholder visuals — replace with real photos */
   .ba-after  { background: linear-gradient(135deg,#e9f3ff,#c7ddf5 55%,#a9c9ee); }
-  .ba-before { background: linear-gradient(135deg,#c9b57a,#9c8442 60%,#6f5c28); clip-path: inset(0 0 0 50%); }
+  .ba-before { background: linear-gradient(135deg,#c9b57a,#9c8442 60%,#6f5c28); clip-path: inset(0 50% 0 0); }
   .ba-tag { position: absolute; bottom: 12px; font-size: .72rem; font-weight: 800; letter-spacing: .1em; padding: .3rem .6rem; border-radius: 6px; color: #fff; background: rgba(0,0,0,.55); }
   .ba-tag.left { left: 12px; } .ba-tag.right { right: 12px; }
   .ba-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: #fff; transform: translateX(-50%); box-shadow: 0 0 0 1px rgba(0,0,0,.15); }
@@ -172,6 +172,7 @@
   .tier h3 { font-size: var(--h3); }
   .tier .price { font-size: 2.4rem; font-weight: 800; letter-spacing: -.03em; margin: .4rem 0 .2rem; }
   .tier .price small { font-size: .9rem; font-weight: 600; color: var(--muted); }
+  .tier .price-alt { font-size: .95rem; font-weight: 600; color: var(--muted); margin: .1rem 0 .8rem; line-height: 1.35; }
   .tier ul { list-style: none; display: grid; gap: .6rem; margin: 1.1rem 0 1.6rem; }
   .tier li { display: flex; gap: .6rem; font-size: .96rem; color: #3a414c; }
   .tier li::before { content: "✓"; color: var(--good); font-weight: 900; }
@@ -224,6 +225,123 @@
 
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto; } }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://panhandleheadlights.com/#org",
+      "name": "Aspect Media Holdings, LLC",
+      "url": "https://panhandleheadlights.com/"
+    },
+    {
+      "@type": ["LocalBusiness", "AutoDetailing"],
+      "@id": "https://panhandleheadlights.com/#business",
+      "name": "Panhandle Headlights",
+      "alternateName": "Panhandle Headlight Restoration",
+      "url": "https://panhandleheadlights.com/",
+      "telephone": "+1-850-583-6322",
+      "email": "info@panhandleheadlights.com",
+      "image": "https://panhandleheadlights.com/logo-hero.png",
+      "priceRange": "$80-$150",
+      "description": "Mobile headlight restoration in Marianna and the Florida Panhandle. Three professional coating tiers with guarantees from 6 to 18 months.",
+      "parentOrganization": { "@id": "https://panhandleheadlights.com/#org" },
+      "areaServed": [
+        { "@type": "City", "name": "Marianna, FL" },
+        { "@type": "City", "name": "Cottondale, FL" },
+        { "@type": "City", "name": "Chipley, FL" },
+        { "@type": "City", "name": "Bonifay, FL" },
+        { "@type": "City", "name": "Blountstown, FL" },
+        { "@type": "City", "name": "Panama City, FL" },
+        { "@type": "City", "name": "Tallahassee, FL" },
+        { "@type": "City", "name": "Dothan, AL" },
+        { "@type": "City", "name": "Bainbridge, GA" },
+        { "@type": "AdministrativeArea", "name": "Florida Panhandle" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Headlight Restoration Coating Tiers",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Clear — Entry Seal",
+            "description": "3M Professional Clear Coat. 6-month guarantee.",
+            "priceSpecification": [
+              { "@type": "PriceSpecification", "price": "80", "priceCurrency": "USD", "description": "Car" },
+              { "@type": "PriceSpecification", "price": "100", "priceCurrency": "USD", "description": "Truck or SUV" }
+            ]
+          },
+          {
+            "@type": "Offer",
+            "name": "Clear Pro — Mid Tier",
+            "description": "Delta Kits Infinity Liquid Coating. 12-month guarantee.",
+            "priceSpecification": [
+              { "@type": "PriceSpecification", "price": "100", "priceCurrency": "USD", "description": "Car" },
+              { "@type": "PriceSpecification", "price": "125", "priceCurrency": "USD", "description": "Truck or SUV" }
+            ]
+          },
+          {
+            "@type": "Offer",
+            "name": "Clear Shield — Top Tier",
+            "description": "GlasWeld COAT UV-Cured Hard Coat. 18-month guarantee.",
+            "priceSpecification": [
+              { "@type": "PriceSpecification", "price": "120", "priceCurrency": "USD", "description": "Car" },
+              { "@type": "PriceSpecification", "price": "150", "priceCurrency": "USD", "description": "Truck or SUV" }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://panhandleheadlights.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long does headlight restoration last in Florida?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Florida's UV index runs 10 to 11 year-round, about twice the northern US average. A basic wipe-on clear coat lasts about 6 months here. A liquid coating with UV stabilizers lasts 12 months. A UV-cured hard coat lasts 18 months. All three carry a matching guarantee: if it hazes inside that window, we re-do it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does headlight restoration cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "$80 per pair for cars on the entry tier; $100 for trucks and SUVs. Mid tier is $100 car and $125 truck. Top tier is $120 car and $150 truck. Severe oxidation adds $15 to $30, quoted on-site before we start."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you come to me?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We are 100% mobile. Free service within about 30 miles of Marianna. 30 to 50 miles: $25 trip fee. Beyond that a travel surcharge applies, and multi-vehicle or dealer batches are preferred."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between the three coatings?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Clear uses 3M Professional Clear Coat, a UV-resistant wipe that lasts about 6 months in Florida sun. Clear Pro uses Delta Kits Infinity Liquid Coating, a thicker water-based polyurethane with UV stabilizers that lasts 12 to 18 months. Clear Shield uses GlasWeld COAT UV-Cured Hard Coat, the OEM-grade coating cured with a UV lamp so it bonds hard to the polycarbonate, matching factory chemistry."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I do it myself with a kit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can. Retail kits handle the sanding and polishing well. Most do not include a UV-rated sealant, and in Florida the results haze back within a few months without one. If you want the sanded result to stay clear, the sealant is the step that matters."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -264,7 +382,7 @@
           <a class="btn btn-primary" href="#quote">Get a free quote</a>
           <a class="btn btn-ghost" href="#pricing">See pricing</a>
         </div>
-        <p class="price-tag"><b>$80&ndash;$120</b> per pair &middot; Serving Marianna, the Panhandle, South AL &amp; SW GA &middot; 6 to 18-month guarantee</p>
+        <p class="price-tag"><b>$80&ndash;$150</b> per pair &middot; Serving Marianna, the Panhandle, South AL &amp; SW GA &middot; 6 to 18-month guarantee</p>
       </div>
       <div>
         <div class="ba" id="ba">
@@ -275,7 +393,6 @@
           <div class="ba-handle" id="baHandle"><span class="ba-knob"></span></div>
           <input type="range" min="0" max="100" value="50" id="baRange" aria-label="Drag to compare before and after" />
         </div>
-        <p class="ph-note">Placeholder slider &mdash; drag it. Swap in a real before/after photo before launch.</p>
       </div>
     </div>
   </section>
@@ -337,12 +454,13 @@
       <div class="sec-head">
         <span class="eyebrow">Simple pricing</span>
         <h2>Pick your protection level.</h2>
-        <p>Prices are per pair of headlights. Pick the tier that matches how long you want results to last.</p>
+        <p>Prices are per pair of headlights. Cars start at the base price. Trucks, SUVs, and vans have larger lenses and take longer &mdash; they run $20 to $30 more per pair. Severe oxidation adds $15 to $30 to any tier, quoted on-site before we start.</p>
       </div>
       <div class="tiers">
         <div class="tier">
           <h3>Clear</h3>
-          <div class="price">$80<small> / pair</small></div>
+          <div class="price">$80<small> / pair &middot; car</small></div>
+          <div class="price-alt">$100 / pair &middot; truck or SUV</div>
           <ul>
             <li>Wet sand &amp; polish</li>
             <li>3M professional clear coat</li>
@@ -353,7 +471,8 @@
         </div>
         <div class="tier">
           <h3>Clear Pro</h3>
-          <div class="price">$100<small> / pair</small></div>
+          <div class="price">$100<small> / pair &middot; car</small></div>
+          <div class="price-alt">$125 / pair &middot; truck or SUV</div>
           <ul>
             <li>Wet sand &amp; polish</li>
             <li>Delta Kits Infinity liquid coat</li>
@@ -365,7 +484,8 @@
         <div class="tier feature">
           <span class="flag">Best protection</span>
           <h3>Clear Shield</h3>
-          <div class="price">$120<small> / pair</small></div>
+          <div class="price">$120<small> / pair &middot; car</small></div>
+          <div class="price-alt">$150 / pair &middot; truck or SUV</div>
           <ul>
             <li>Wet sand &amp; polish</li>
             <li>GlasWeld COAT UV-cured hard coat</li>
@@ -375,8 +495,8 @@
           <a class="btn btn-primary" href="tel:+18505836322">Book Clear Shield</a>
         </div>
       </div>
-      <p style="margin-top:1.8rem;padding:1rem 1.2rem;border-radius:12px;background:linear-gradient(135deg,rgba(47,125,225,.08),rgba(255,191,61,.12));border:1px solid var(--line);font-weight:600;color:var(--ink);">Military &amp; Veterans, First Responders, and Teachers: <strong>10% off</strong> any tier. Just show valid ID at your appointment.</p>
-      <p class="fineprint">Free mobile service within about 30 miles of Marianna. 30 to 50 miles: a $25 trip fee. Beyond 50 miles (wider Panhandle, South Alabama, Southwest Georgia): a travel surcharge applies, and multi-vehicle or dealer batches are preferred. Fleet pricing: from $50 per vehicle (Clear), $65 (Clear Pro), or $80 (Clear Shield). One discount per job; discounts apply to retail work and do not stack. Prices subject to applicable Florida sales tax.</p>
+      <p style="margin-top:1.8rem;padding:1rem 1.2rem;border-radius:12px;background:linear-gradient(135deg,rgba(47,125,225,.08),rgba(255,191,61,.12));border:1px solid var(--line);font-weight:600;color:var(--ink);">Military, Veterans, Law Enforcement, First Responders, and School Employees: <strong>10% off</strong> any tier. Just show valid ID at your appointment.</p>
+      <p class="fineprint">Free mobile service within about 30 miles of Marianna. 30 to 50 miles: a $25 trip fee. Beyond 50 miles (wider Panhandle, South Alabama, Southwest Georgia): a travel surcharge applies, and multi-vehicle or dealer batches are preferred. Fleet pricing (per vehicle): Clear $50 car / $65 truck-SUV; Clear Pro $65 / $85; Clear Shield $80 / $105. Condition upcharge (+$15 moderate, +$30 severe) applies to all tiers when needed, quoted on-site before work begins. One discount per job; discounts apply to retail work and do not stack. Prices subject to applicable Florida sales tax.</p>
     </div>
   </section>
 
@@ -394,22 +514,34 @@
     </div>
   </section>
 
-  <!-- GALLERY -->
-  <section id="work" style="background:var(--paper-2);border-block:1px solid var(--line);">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow">Recent work</span>
-        <h2>The proof is in the glass.</h2>
-        <p>Replace these with your own before/after photos as you complete jobs.</p>
+  <!--
+    RECENT JOBS SCAFFOLD — un-comment and populate this section once real
+    before/after photos exist. Add 2-3 dated entries per week to keep the
+    page fresh for AI-search freshness signals.
+
+    Entry template:
+      <li class="job">
+        <img src="/jobs/2026-09-15-ford-f150-marianna.jpg"
+             alt="Before/after — 2014 Ford F-150 in Marianna, FL, Clear Shield tier" />
+        <div>
+          <time datetime="2026-09-15">Sep 15, 2026</time>
+          <p><strong>2014 Ford F-150</strong> — Marianna, FL — Clear Shield</p>
+        </div>
+      </li>
+
+    <section id="work" style="background:var(--paper-2);border-block:1px solid var(--line);">
+      <div class="wrap">
+        <div class="sec-head">
+          <span class="eyebrow">Recent jobs</span>
+          <h2>Fresh work, dated.</h2>
+          <p>New jobs added every week. Vehicle, town, tier, real before and after.</p>
+        </div>
+        <ul class="recent-jobs">
+          [entries here]
+        </ul>
       </div>
-      <div class="gallery">
-        <div class="ph">Before / After<br>photo 1</div>
-        <div class="ph">Before / After<br>photo 2</div>
-        <div class="ph">Before / After<br>photo 3</div>
-        <div class="ph">Before / After<br>photo 4</div>
-      </div>
-    </div>
-  </section>
+    </section>
+  -->
 
   <!-- SERVICE AREA -->
   <section id="area" class="wrap">
@@ -500,7 +632,7 @@
       <span class="brand-name">Panhandle Headlight Restoration</span>
     </a>
     <p>Mobile headlight restoration &middot; Marianna, FL &middot; <a href="tel:+18505836322">(850) 583-6322</a> &middot; <a href="mailto:info@panhandleheadlights.com">info@panhandleheadlights.com</a></p>
-    <p class="legal">Panhandle Headlight Restoration, LLC. Results vary with lens age and condition. Guarantee covers workmanship on the restored outer surface and does not cover physical damage, internal fogging, or harsh-chemical exposure. See your service agreement for full terms. &copy; <span id="yr"></span> Panhandle Headlight Restoration, LLC.</p>
+    <p class="legal">Aspect Media Holdings, LLC DBA Panhandle Headlights. Results vary with lens age and condition. Guarantee covers workmanship on the restored outer surface and does not cover physical damage, internal fogging, or harsh-chemical exposure. See your service agreement for full terms. &copy; <span id="yr"></span> Aspect Media Holdings, LLC.</p>
   </div>
 </footer>
 
@@ -517,7 +649,7 @@
     var before = document.getElementById('baBefore');
     var handle = document.getElementById('baHandle');
     function set(v) {
-      before.style.clipPath = 'inset(0 0 0 ' + v + '%)';
+      before.style.clipPath = 'inset(0 ' + (100 - v) + '% 0 0)';
       handle.style.left = v + '%';
     }
     if (range) { range.addEventListener('input', function () { set(this.value); }); set(50); }
