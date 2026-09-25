@@ -1,6 +1,27 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CtaBand from '../components/CtaBand.astro';
+
+const jobs = [
+  {
+    src: '/gallery/jason.jpg',
+    alt: 'Before and after headlight restoration on Jason\'s vehicle, driver side',
+    caption: "Jason — driver side",
+    location: 'Marianna, FL',
+  },
+  {
+    src: '/gallery/jason-right.jpg',
+    alt: 'Before and after headlight restoration on Jason\'s vehicle, passenger side',
+    caption: 'Jason — passenger side',
+    location: 'Marianna, FL',
+  },
+  {
+    src: '/gallery/junk.jpg',
+    alt: 'Before and after headlight restoration showing heavy oxidation removed',
+    caption: 'Heavy oxidation — cleared up',
+    location: 'Marianna, FL',
+  },
+];
 ---
 <BaseLayout
   title="Gallery | Panhandle Headlight Restoration"
@@ -10,12 +31,24 @@ import CtaBand from '../components/CtaBand.astro';
     <div class="sec-head">
       <span class="eyebrow">Recent jobs</span>
       <h2>Real work, dated.</h2>
-      <p>New before/after photos land here as jobs come in. Every image is a real customer vehicle, with permission, taken the same day.</p>
+      <p>Every image is a real customer vehicle, with permission, taken the same day. Fresh work added as jobs come in.</p>
     </div>
 
-    <div class="card" style="text-align:center;padding:3rem 1.5rem;max-width:640px;margin:0 auto;">
-      <h3 style="font-size:var(--h3);margin-bottom:.6rem;">First jobs launching soon.</h3>
-      <p style="color:var(--muted);margin-bottom:1.4rem;">Book a slot in launch week and your car may be one of our first before/after posts — with your permission.</p>
+    <div class="gallery-grid">
+      {jobs.map((job) => (
+        <figure class="gallery-item">
+          <img src={job.src} alt={job.alt} loading="lazy" decoding="async" width="1080" height="1600" />
+          <figcaption>
+            <strong>{job.caption}</strong>
+            <span>{job.location}</span>
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+
+    <div class="card" style="text-align:center;padding:2.4rem 1.5rem;max-width:640px;margin:3rem auto 0;">
+      <h3 style="font-size:var(--h3);margin-bottom:.6rem;">Your car could be next.</h3>
+      <p style="color:var(--muted);margin-bottom:1.4rem;">Book a slot and we'll add your before/after here — with your permission.</p>
       <div class="cta-row" style="justify-content:center;">
         <a class="btn btn-primary" href="/quote/">Get a free quote</a>
         <a class="btn btn-dark" href="tel:+18505836322">Call (850) 583-6322</a>
@@ -25,3 +58,45 @@ import CtaBand from '../components/CtaBand.astro';
 
   <CtaBand />
 </BaseLayout>
+
+<style>
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  .gallery-item {
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--card, #111);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+  }
+  .gallery-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1080 / 1600;
+    object-fit: cover;
+  }
+  .gallery-item figcaption {
+    padding: .9rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .15rem;
+  }
+  .gallery-item figcaption strong {
+    font-size: 1rem;
+  }
+  .gallery-item figcaption span {
+    color: var(--muted);
+    font-size: .875rem;
+  }
+  @media (max-width: 900px) {
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .gallery-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+  }
+</style>
