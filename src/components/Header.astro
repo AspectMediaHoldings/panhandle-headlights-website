@@ -6,9 +6,11 @@ const links = [
   { href: '/service-area/', label: 'Service area' },
   { href: '/gallery/', label: 'Gallery' },
   { href: '/quote/', label: 'Quote' },
+  { href: '/referral/', label: 'Referral' },
   { href: '/about/', label: 'About' },
+  { href: '/legal/', label: 'Legal' },
 ];
-const isCurrent = (href: string) => pathname === href || pathname === href.replace(/\/$/, '');
+const isCurrent = (href: string) => pathname === href || pathname === href.replace(/\/$/, '') || (href === '/legal/' && pathname.startsWith('/legal'));
 ---
 <header class="site">
   <div class="wrap">

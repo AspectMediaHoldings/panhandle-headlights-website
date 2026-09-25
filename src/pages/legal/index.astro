@@ -1,0 +1,72 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Legal Documents | Panhandle Headlight Restoration"
+  description="Complete legal document suite for Panhandle Headlight Restoration: Terms of Service, Service Guarantee, Cancellation and Deposit Policy, Customer Service Agreement, Privacy Policy, Cookie and Analytics Policy, and Disclaimer."
+>
+  <section class="wrap legal-index">
+    <div class="sec-head">
+      <span class="eyebrow">Legal documents</span>
+      <h2>The full set, plain-language.</h2>
+      <p>We publish every document that governs your relationship with us. Read them anytime. Each one applies at booking, at service, and afterward.</p>
+    </div>
+
+    <div class="legal-grid">
+      <a class="legal-card" href="/legal/service-guarantee/">
+        <h3>Service Guarantee</h3>
+        <p>What we guarantee, for how long (6, 18, or 36 months), how to file a claim, and what's not covered.</p>
+        <span class="legal-updated">Updated Sept 22, 2026</span>
+      </a>
+
+      <a class="legal-card" href="/legal/cancellation-policy/">
+        <h3>Cancellation and Deposit Policy</h3>
+        <p>Deposit rules, cancellation windows, no-shows, weather rescheduling, force majeure, and refund timing.</p>
+        <span class="legal-updated">Updated Sept 22, 2026</span>
+      </a>
+
+      <a class="legal-card" href="/legal/terms-of-service/">
+        <h3>Terms of Service</h3>
+        <p>Service tiers, pricing, travel fees, site conditions, payment, and the overall commercial relationship.</p>
+        <span class="legal-updated">Updated Sept 22, 2026</span>
+      </a>
+
+      <a class="legal-card" href="/legal/customer-service-agreement/">
+        <h3>Customer Service Agreement</h3>
+        <p>The per-appointment agreement you sign at booking. Tier selection, add-on quote, discounts, signatures.</p>
+        <span class="legal-updated">Updated Sept 22, 2026</span>
+      </a>
+
+      <a class="legal-card" href="/legal/privacy-policy/">
+        <h3>Privacy Policy</h3>
+        <p>What we collect, how we use it, who we share it with (short list), and your rights. TCPA-compliant SMS.</p>
+        <span class="legal-updated">Updated Sept 16, 2026</span>
+      </a>
+
+      <a class="legal-card" href="/legal/cookie-policy/">
+        <h3>Cookie and Analytics Policy</h3>
+        <p>We don't use tracking cookies or advertising pixels. Cloudflare analytics are cookieless and aggregate only.</p>
+        <span class="legal-updated">Updated Sept 16, 2026</span>
+      </a>
+
+      <a class="legal-card" href="/legal/disclaimer/">
+        <h3>Disclaimer</h3>
+        <p>Results vary. Pre-existing lens conditions. Florida UV context. Website content and testimonials.</p>
+        <span class="legal-updated">Updated Sept 16, 2026</span>
+      </a>
+    </div>
+
+    <p class="legal-footnote">Publisher: <strong>Aspect Media Holdings, LLC</strong> dba Panhandle Headlight Restoration. Florida limited liability company. Governing law: State of Florida. Venue: Jackson County, Florida. Questions: <a href="tel:+18505836322">(850) 583-6322</a> or <a href="mailto:info@panhandleheadlights.com">info@panhandleheadlights.com</a>.</p>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal-index { padding-block: 3rem; }
+  .legal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 2rem 0; }
+  .legal-card { display: block; padding: 1.4rem 1.5rem; border: 1px solid var(--line, #e5e2dc); border-radius: 8px; background: var(--paper, #fff); text-decoration: none; color: inherit; transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease; }
+  .legal-card:hover { transform: translateY(-2px); border-color: var(--beam, #B84518); box-shadow: 0 6px 18px rgba(0,0,0,.06); }
+  .legal-card h3 { margin: 0 0 .5rem; font-size: 1.12rem; color: var(--ink, #14181f); }
+  .legal-card p { margin: 0 0 .8rem; color: var(--muted, #555); font-size: .95rem; line-height: 1.5; }
+  .legal-updated { font-size: .78rem; color: var(--muted, #888); text-transform: uppercase; letter-spacing: .05em; }
+  .legal-footnote { max-width: 780px; margin: 2rem auto 0; padding-top: 1.5rem; border-top: 1px solid var(--line, #e5e2dc); color: var(--muted, #666); font-size: .9rem; line-height: 1.55; text-align: center; }
+</style>

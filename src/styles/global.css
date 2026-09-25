@@ -103,8 +103,9 @@ header .head-cta { display: none; }
   border: 1px solid rgba(255,255,255,.1);
 }
 .ba-layer { position: absolute; inset: 0; background-size: cover; background-position: center; }
-.ba-after  { background: linear-gradient(135deg,#e9f3ff,#c7ddf5 55%,#a9c9ee); }
-.ba-before { background: linear-gradient(135deg,#c9b57a,#9c8442 60%,#6f5c28); clip-path: inset(0 50% 0 0); }
+.ba-after  { background-image: url('/gallery/jason-after.jpg'); background-color: #14181f; }
+.ba-before { background-image: url('/gallery/jason-before.jpg'); background-color: #14181f; clip-path: inset(0 50% 0 0); }
+.ba .ba-tag { display: none; }
 .ba-tag { position: absolute; bottom: 12px; font-size: .72rem; font-weight: 800; letter-spacing: .1em; padding: .3rem .6rem; border-radius: 6px; color: #fff; background: rgba(0,0,0,.55); }
 .ba-tag.left { left: 12px; } .ba-tag.right { right: 12px; }
 .ba-handle { position: absolute; top: 0; bottom: 0; left: 50%; width: 3px; background: #fff; transform: translateX(-50%); box-shadow: 0 0 0 1px rgba(0,0,0,.15); }
@@ -180,13 +181,13 @@ section { padding-block: var(--section); }
 .cta-band .cta-row { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; }
 
 /* footer */
-footer.site { background: var(--ink); color: #aab2be; padding: 2.4rem 0 6rem; font-size: .9rem; }
-footer.site .wrap { display: grid; gap: 1rem; }
-footer .brand { color: #fff; min-height: 44px; padding-block: 6px; }
+footer.site { background: var(--ink); color: #aab2be; padding: 2.4rem 0 6rem; font-size: .9rem; text-align: center; }
+footer.site .wrap { display: grid; gap: 1rem; justify-items: center; }
+footer .brand { color: #fff; min-height: 44px; padding-block: 6px; justify-content: center; }
 footer a { color: var(--beam); text-decoration: underline; text-underline-offset: 2px; }
 footer a[href^="tel:"], footer a[href^="mailto:"] { display: inline-block; padding-block: 12px; min-height: 44px; line-height: 1.25; }
-footer .legal { font-size: .78rem; color: #9aa4b2; max-width: 60ch; }
-footer .flinks { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; font-size: .88rem; }
+footer .legal { font-size: .78rem; color: #9aa4b2; max-width: 60ch; margin-inline: auto; }
+footer .flinks { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; font-size: .88rem; justify-content: center; }
 footer .flinks a { color: #cfd6e0; text-decoration: none; }
 footer .flinks a:hover { color: #fff; text-decoration: underline; }
 
