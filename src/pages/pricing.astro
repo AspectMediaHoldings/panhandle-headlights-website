@@ -50,7 +50,114 @@ import CtaBand from '../components/CtaBand.astro';
     </div>
     <p class="discount-banner">Military, Veterans, Law Enforcement, First Responders, and School Employees: <strong>10% off</strong> any tier. Just show valid ID at your appointment.</p>
     <p class="fineprint">Free mobile service within about 30 miles of Marianna. 30 to 50 miles: a $25 trip fee. Beyond 50 miles (wider Panhandle, South Alabama, Southwest Georgia): a travel surcharge applies, and multi-vehicle or dealer batches are preferred. Fleet pricing (per vehicle): Clear Coat $50; Clear Coat Pro $65; Clear Coat UV $80. Add-on charge for retail jobs (does not apply to fleet): starting at $20, quoted on-site, applies to heavy oxidation OR larger headlights (truck / van / SUV / large housings) OR extensive damage repair. Only one add-on charge applies per vehicle regardless of the number of applicable factors. One discount per job; discounts apply to retail work and do not stack. Prices subject to applicable Florida sales tax.</p>
+
+    <div class="sec-head" style="margin-top:4rem;">
+      <span class="eyebrow">Compare</span>
+      <h2>Why $60 pro beats a $20 kit.</h2>
+      <p>Retail kits look cheap on the shelf. Here is what they actually cost you in Florida sun.</p>
+    </div>
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Factor</th>
+            <th>$20 kit from the parts store</th>
+            <th>Panhandle Headlights</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Wet sanding grits</td>
+            <td>3 to 4 pads at best</td>
+            <td>Progressive grits 400 through 3000</td>
+          </tr>
+          <tr>
+            <td>UV-rated sealant included</td>
+            <td>Rarely, and even then not rated for FL UV</td>
+            <td>Yes, professional coating, all three tiers</td>
+          </tr>
+          <tr>
+            <td>Guarantee</td>
+            <td>None</td>
+            <td>6, 18, or 36 months in writing</td>
+          </tr>
+          <tr>
+            <td>Time investment</td>
+            <td>2 to 3 hours of your Saturday</td>
+            <td>We come to your driveway</td>
+          </tr>
+          <tr>
+            <td>Result in Florida sun</td>
+            <td>Hazy again in 3 to 6 months</td>
+            <td>Stays clear for the full warranty term</td>
+          </tr>
+          <tr>
+            <td>Total cost</td>
+            <td>$20 kit + 3 hours + no warranty</td>
+            <td>$60 to $100 flat, warranty in writing</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="text-align:center;margin-top:1.5rem;">
+      <a class="btn btn-primary" href="sms:+18505836322?&body=Hi%2C%20I%27d%20like%20a%20headlight%20quote.">Text for a free quote</a>
+      <a class="btn btn-dark" href="tel:+18505836322" style="margin-left:.5rem;">Call (850) 583-6322</a>
+    </div>
   </section>
 
   <CtaBand />
 </BaseLayout>
+
+<style>
+  .compare-wrap {
+    margin: 2rem 0 0;
+    overflow-x: auto;
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    background: var(--paper-2);
+  }
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--paper-2);
+  }
+  .compare-table th,
+  .compare-table td {
+    padding: 1rem 1.2rem;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+    color: var(--ink);
+    font-size: 1rem;
+  }
+  .compare-table thead th {
+    background: var(--paper);
+    font-weight: 800;
+    font-size: .88rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--ink);
+    border-bottom: 2px solid var(--line);
+  }
+  .compare-table thead th:last-child {
+    color: var(--trust);
+    background: rgba(47, 125, 225, 0.08);
+  }
+  .compare-table tbody tr:nth-child(even) td { background: var(--paper); }
+  .compare-table tbody tr:nth-child(even) td:last-child { background: rgba(47, 125, 225, 0.05); }
+  .compare-table tbody td:first-child {
+    font-weight: 700;
+    color: var(--ink);
+    width: 26%;
+  }
+  .compare-table tbody td:nth-child(2) { color: var(--muted); }
+  .compare-table tbody td:last-child {
+    font-weight: 600;
+    color: var(--ink);
+    background: rgba(47, 125, 225, 0.03);
+  }
+  .compare-table tr:last-child td { border-bottom: none; }
+  @media (max-width: 720px) {
+    .compare-table th, .compare-table td { padding: .75rem .85rem; font-size: .92rem; }
+  }
+</style>

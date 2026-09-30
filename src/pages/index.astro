@@ -6,9 +6,9 @@ import CtaBand from '../components/CtaBand.astro';
 ---
 <BaseLayout
   title="Panhandle Headlight Restoration | Marianna, FL Mobile Headlight Restoration"
-  description="Mobile headlight restoration in Marianna and the Florida Panhandle. Three coating tiers from $60 per pair. Professional hard coats rated for Florida UV. 6, 18, or 36-month guarantee. We come to you."
+  description="Foggy headlights fail at night. We fix them at your door. Mobile headlight restoration in Marianna and the Florida Panhandle. Three coating tiers from $60 per pair. 6, 18, or 36-month guarantee."
   ogTitle="Panhandle Headlight Restoration | Marianna, FL"
-  ogDescription="Mobile headlight restoration in Marianna and the Florida Panhandle. We come to you. Three coating tiers from $60 per pair for one vehicle. 6, 18, or 36-month guarantee."
+  ogDescription="Foggy headlights fail at night. We fix them at your door. Mobile headlight restoration in Marianna and the Florida Panhandle. Three coating tiers from $60 per pair. 6, 18, or 36-month guarantee."
 >
 
   <!-- HERO -->
@@ -20,10 +20,11 @@ import CtaBand from '../components/CtaBand.astro';
           <img src="/logo-hero.png" alt="Panhandle Headlight Restoration — we come to you" width="800" height="580" class="hero-logo" />
         </picture>
         <span class="eyebrow"><span style="width:8px;height:8px;border-radius:50%;background:var(--beam);display:inline-block"></span> Mobile headlight restoration</span>
-        <h1>Foggy headlights, <em>gone for good.</em></h1>
-        <p class="lead">We sand, polish, and seal your lenses with a professional hard coat matched to Florida&rsquo;s extreme UV. Three tiers, three protection levels. We come to you.</p>
+        <h1>Foggy headlights fail at night. <em>We fix them at your door.</em></h1>
+        <p class="lead">Wet sand, polish, and a professional coating matched to Florida&rsquo;s extreme UV. Three protection levels, guarantees in writing (6, 18, or 36 months). We come to you.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="/quote/">Get a free quote</a>
+          <a class="btn btn-primary" href="sms:+18505836322?&body=Hi%2C%20I%27d%20like%20a%20headlight%20quote.">Text for a free quote</a>
+          <a class="btn btn-dark" href="tel:+18505836322">Call (850) 583-6322</a>
           <a class="btn btn-ghost" href="/pricing/">See pricing</a>
         </div>
         <p class="price-tag"><b>$60&ndash;$100</b> per pair &middot; Serving Marianna, the Panhandle, South AL &amp; SW GA &middot; 6, 18, or 36-month guarantee</p>
@@ -58,6 +59,123 @@ import CtaBand from '../components/CtaBand.astro';
     </div>
   </section>
 
+  <!-- HOW IT WORKS (home teaser) -->
+  <section id="how" class="wrap" style="margin-top:3rem;">
+    <div class="sec-head">
+      <span class="eyebrow">How it works</span>
+      <h2>Seven steps from hazy to clear.</h2>
+      <p>Every job follows the same process. No shortcuts, no skipped sealing step. Full detail on the <a href="/how-it-works/" style="color:var(--trust);text-decoration:underline;">how it works</a> page.</p>
+    </div>
+    <ol class="steps-list">
+      <li><span class="step-num">1</span><div><h3>On-site inspection & quote</h3><p>We inspect at your driveway, confirm the tier, and quote before we start.</p></div></li>
+      <li><span class="step-num">2</span><div><h3>Mask & protect</h3><p>Paint, trim, and seals around the headlight get masked off.</p></div></li>
+      <li><span class="step-num">3</span><div><h3>Progressive wet sanding</h3><p>Grits 400 through 3000, working out oxidation without gouging the lens.</p></div></li>
+      <li><span class="step-num">4</span><div><h3>Machine polish</h3><p>Polished to optical clarity, ready to accept a coating.</p></div></li>
+      <li><span class="step-num">5</span><div><h3>Surface prep</h3><p>Cleaned, dried, and prepped so the coating bonds properly.</p></div></li>
+      <li><span class="step-num">6</span><div><h3>Coating applied</h3><p>Your chosen tier: Clear Coat, Clear Coat Pro, or Clear Coat UV (UV-lamp cured hard coat).</p></div></li>
+      <li><span class="step-num">7</span><div><h3>Cure & hand off</h3><p>Coating cures, lights get a final inspection, guarantee starts today.</p></div></li>
+    </ol>
+    <div style="text-align:center;margin-top:1.5rem;">
+      <a class="btn btn-primary" href="/how-it-works/">Read the full process</a>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS (mock — replace with real reviews) -->
+  <section id="testimonials" class="wrap" style="margin-top:3rem;">
+    <div class="sec-head">
+      <span class="eyebrow">Reviews</span>
+      <h2>What customers say.</h2>
+      <p>Real jobs, real customers. New reviews added as they come in. Leave yours after your job on our <a href="https://g.page/r/YOUR-REVIEW-LINK-HERE" style="color:var(--trust);text-decoration:underline;">Google Business Profile</a>.</p>
+    </div>
+    <div class="testimonials-grid">
+      <blockquote class="testimonial">
+        <p>"[TESTIMONIAL 1 — REPLACE WITH REAL CUSTOMER QUOTE]"</p>
+        <footer><strong>[FIRST NAME + LAST INITIAL]</strong><span>[CITY, ST]</span></footer>
+      </blockquote>
+      <blockquote class="testimonial">
+        <p>"[TESTIMONIAL 2 — REPLACE WITH REAL CUSTOMER QUOTE]"</p>
+        <footer><strong>[FIRST NAME + LAST INITIAL]</strong><span>[CITY, ST]</span></footer>
+      </blockquote>
+      <blockquote class="testimonial">
+        <p>"[TESTIMONIAL 3 — REPLACE WITH REAL CUSTOMER QUOTE]"</p>
+        <footer><strong>[FIRST NAME + LAST INITIAL]</strong><span>[CITY, ST]</span></footer>
+      </blockquote>
+    </div>
+  </section>
+
   <CtaBand />
 
 </BaseLayout>
+
+<style>
+  .steps-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0 0;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .steps-list li {
+    display: flex;
+    gap: 1rem;
+    padding: 1.4rem 1.5rem;
+    background: var(--paper-2);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    align-items: flex-start;
+    transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+  }
+  .steps-list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(0,0,0,.08);
+  }
+  .step-num {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    border-radius: 11px;
+    background: linear-gradient(135deg, var(--beam), var(--beam-strong));
+    color: #241a00;
+    font-weight: 900;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+  }
+  .steps-list h3 { font-size: var(--h3); margin: 0 0 .35rem; color: var(--ink); }
+  .steps-list p { color: var(--muted); font-size: 1rem; margin: 0; line-height: 1.5; }
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+  .testimonial {
+    margin: 0;
+    padding: 1.6rem 1.8rem;
+    background: var(--paper-2);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    border-left: 4px solid var(--trust);
+    transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+  }
+  .testimonial:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(0,0,0,.08);
+  }
+  .testimonial p {
+    margin: 0 0 1rem;
+    font-style: italic;
+    color: var(--ink);
+    font-size: 1.05rem;
+    line-height: 1.55;
+  }
+  .testimonial footer {
+    display: flex;
+    flex-direction: column;
+    gap: .15rem;
+  }
+  .testimonial footer strong { font-size: 1rem; color: var(--ink); }
+  .testimonial footer span { color: var(--muted); font-size: .9rem; }
+</style>

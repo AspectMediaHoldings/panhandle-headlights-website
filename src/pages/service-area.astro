@@ -1,6 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CtaBand from '../components/CtaBand.astro';
+
+const MAPS_KEY = process.env.PUBLIC_GOOGLE_MAPS_KEY ?? import.meta.env.PUBLIC_GOOGLE_MAPS_KEY ?? '';
+const mapsScriptUrl = `https://maps.googleapis.com/maps/api/js?key=${MAPS_KEY}&callback=initServiceAreaMap&loading=async&v=weekly`;
 ---
 <BaseLayout
   title="Service Area | Panhandle Headlight Restoration"
@@ -12,6 +15,30 @@ import CtaBand from '../components/CtaBand.astro';
       <h2>Based in Marianna. We travel to you across three states.</h2>
       <p>Mobile headlight restoration throughout the Florida Panhandle, South Alabama, and Southwest Georgia. Free within about 30 miles of Marianna; a travel fee applies farther out.</p>
     </div>
+
+    <div class="map-wrap">
+      <div id="service-area-map" role="img" aria-label="Interactive map showing Panhandle Headlight Restoration service zones centered on Marianna, Florida"></div>
+      <p class="map-fallback" hidden>Map failed to load. Text or call (850) 583-6322 to check if your location is in range.</p>
+    </div>
+
+    <div class="zone-legend">
+      <div class="zone zone-free">
+        <span class="zone-radius">~30 mi</span>
+        <span class="zone-label">Free service</span>
+        <span class="zone-note">No trip fee</span>
+      </div>
+      <div class="zone zone-fee">
+        <span class="zone-radius">30&ndash;50 mi</span>
+        <span class="zone-label">$25 trip fee</span>
+        <span class="zone-note">One flat fee</span>
+      </div>
+      <div class="zone zone-surcharge">
+        <span class="zone-radius">50+ mi</span>
+        <span class="zone-label">Travel surcharge</span>
+        <span class="zone-note">Multi-vehicle / dealer batches preferred</span>
+      </div>
+    </div>
+
     <div class="tiers">
       <div class="card">
         <h3 style="font-size:var(--h3);">Core area &mdash; no trip fee</h3>
@@ -27,7 +54,118 @@ import CtaBand from '../components/CtaBand.astro';
       </div>
     </div>
     <p class="fineprint">Not sure if you're in range? Text your location for a quick answer. Longer hauls are welcome for multi-vehicle jobs and dealer lots.</p>
+    <div style="text-align:center;margin-top:1.5rem;">
+      <a class="btn btn-primary" href="sms:+18505836322?&body=Hi%2C%20I%27d%20like%20to%20check%20if%20my%20location%20is%20in%20your%20service%20area.">Text your location</a>
+      <a class="btn btn-dark" href="tel:+18505836322" style="margin-left:.5rem;">Call (850) 583-6322</a>
+    </div>
   </section>
 
   <CtaBand />
 </BaseLayout>
+
+<script is:inline>
+  window.initServiceAreaMap = function () {
+    const marianna = { lat: 30.7744, lng: -85.2266 };
+    const map = new google.maps.Map(document.getElementById('service-area-map'), {
+      center: marianna,
+      zoom: 7,
+      mapTypeControl: false,
+      streetViewControl: false,
+      fullscreenControl: true,
+      gestureHandling: 'cooperative',
+    });
+    const zones = [
+      { r: 160934, color: '#b31217', fill: 0.08, stroke: 0.5 },
+      { r: 80467,  color: '#f59f00', fill: 0.18, stroke: 0.7 },
+      { r: 48280,  color: '#2f9e44', fill: 0.28, stroke: 0.8 },
+    ];
+    zones.forEach(function (z) {
+      new google.maps.Circle({
+        strokeColor: z.color,
+        strokeOpacity: z.stroke,
+        strokeWeight: 2,
+        fillColor: z.color,
+        fillOpacity: z.fill,
+        map: map,
+        center: marianna,
+        radius: z.r,
+        clickable: false,
+      });
+    });
+    new google.maps.Marker({
+      position: marianna,
+      map: map,
+      title: 'Panhandle Headlight Restoration — Marianna, FL',
+    });
+  };
+  window.__mapsScriptFailed = function () {
+    const fb = document.querySelector('.map-fallback');
+    const m = document.getElementById('service-area-map');
+    if (fb) fb.hidden = false;
+    if (m) m.style.display = 'none';
+  };
+</script>
+{MAPS_KEY && <script async defer src={mapsScriptUrl} onerror="window.__mapsScriptFailed()"></script>}
+{!MAPS_KEY && <script is:inline>window.__mapsScriptFailed();</script>}
+
+<style>
+  .map-wrap {
+    margin: 2rem 0 0;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--card, #111);
+  }
+  #service-area-map {
+    width: 100%;
+    height: 480px;
+    border-radius: 12px;
+  }
+  .map-fallback {
+    padding: 2rem;
+    text-align: center;
+    color: var(--muted);
+  }
+  .zone-legend {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1.25rem 0 2.5rem;
+  }
+  .zone {
+    background: var(--paper-2);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.3rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: .35rem;
+    border-left: 6px solid var(--trust);
+    transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+  }
+  .zone:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(0,0,0,.08);
+  }
+  .zone-free { border-left-color: #2f9e44; }
+  .zone-fee { border-left-color: #f59f00; }
+  .zone-surcharge { border-left-color: #b31217; }
+  .zone-radius {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--ink);
+  }
+  .zone-label {
+    font-weight: 700;
+    color: var(--ink);
+    font-size: 1.05rem;
+  }
+  .zone-note {
+    color: var(--muted);
+    font-size: .9rem;
+  }
+  @media (max-width: 720px) {
+    .zone-legend { grid-template-columns: 1fr; }
+    #service-area-map { height: 380px; }
+  }
+</style>

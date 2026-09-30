@@ -4,15 +4,32 @@ import CtaBand from '../components/CtaBand.astro';
 ---
 <BaseLayout
   title="About | Panhandle Headlight Restoration"
-  description="Family-run mobile headlight restoration based in Marianna, Florida. A subsidiary of Aspect Media Holdings, LLC. Serving the Florida Panhandle, South Alabama, and Southwest Georgia."
+  description="Founded and operated by Nathan Spells in Marianna, Florida. A trade name of Aspect Media Holdings, LLC. Mobile headlight restoration serving the Florida Panhandle, South Alabama, and Southwest Georgia."
 >
   <section class="wrap">
     <div class="sec-head">
       <span class="eyebrow">About</span>
-      <h2>Local. Family-run. Built for Florida.</h2>
+      <h2>Local. Mobile. Backed in writing.</h2>
       <p>Panhandle Headlight Restoration is a mobile service based in Marianna, Florida. We come to your home, workplace, or lot, restore your headlights on-site, and back the work with a written guarantee.</p>
     </div>
-    <div class="split">
+
+    <div class="owner-block">
+      <div class="owner-photo">
+        <img src="/nathan.jpg" alt="Nathan Spells, founder of Panhandle Headlight Restoration" width="800" height="1067" />
+      </div>
+      <div class="owner-story">
+        <span class="eyebrow">Founder & operator</span>
+        <h3>Meet Nathan.</h3>
+        <p>Hi, I&rsquo;m Nathan Spells. My wife&rsquo;s family has roots in the Florida Panhandle going back generations. We moved to Marianna five years ago and I&rsquo;ve been part of this community ever since, running Aspect Media Holdings, LLC from here. Panhandle Headlight Restoration is a service brand I launched under AMH after seeing local drivers get quoted $500 to $800 to replace headlights that are fixable in under two hours with the right tools and coating.</p>
+        <p>I handle every job personally. On-site quotes before I start, real guarantees in writing (6, 18, or 36 months depending on the tier), and mobile service that comes to your driveway. If the finish doesn&rsquo;t meet the spec we agreed to, I redo it. That&rsquo;s the whole promise.</p>
+        <div class="cta-row" style="margin-top:1.2rem;">
+          <a class="btn btn-primary" href="sms:+18505836322?&body=Hi%20Nathan%2C%20I%27d%20like%20a%20headlight%20quote.">Text Nathan</a>
+          <a class="btn btn-dark" href="tel:+18505836322">Call (850) 583-6322</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="split" style="margin-top:2.5rem;">
       <div>
         <div class="card" style="padding:1.6rem;">
           <h3 style="font-size:var(--h3);margin-bottom:.6rem;">Why we exist</h3>
@@ -22,7 +39,7 @@ import CtaBand from '../components/CtaBand.astro';
       <div>
         <div class="card" style="padding:1.6rem;">
           <h3 style="font-size:var(--h3);margin-bottom:.6rem;">Who we are</h3>
-          <p style="color:var(--muted);">Panhandle Headlight Restoration is a subsidiary of Aspect Media Holdings, LLC, a Florida limited liability company based in Marianna, Jackson County. We stand behind our work with a written workmanship guarantee, and we back retail customers with a personal discount for military, veterans, law enforcement, first responders, and school employees.</p>
+          <p style="color:var(--muted);">Panhandle Headlight Restoration is a trade name of Aspect Media Holdings, LLC, a Florida limited liability company based in Marianna, Jackson County. We stand behind our work with a written workmanship guarantee, and we back retail customers with a personal discount for military, veterans, law enforcement, first responders, and school employees.</p>
         </div>
       </div>
     </div>
@@ -44,3 +61,49 @@ import CtaBand from '../components/CtaBand.astro';
 
   <CtaBand />
 </BaseLayout>
+
+<style>
+  .owner-block {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    align-items: start;
+  }
+  .owner-photo {
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--card, #111);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+  }
+  .owner-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 800 / 1067;
+    object-fit: cover;
+  }
+  .owner-story {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+  }
+  .owner-story h3 {
+    font-size: var(--h2);
+    margin: .3rem 0 .5rem;
+  }
+  .owner-story p {
+    color: var(--muted);
+    line-height: 1.65;
+  }
+  @media (max-width: 780px) {
+    .owner-block {
+      grid-template-columns: 1fr;
+      gap: 1.4rem;
+    }
+    .owner-photo {
+      max-width: 320px;
+      margin: 0 auto;
+    }
+  }
+</style>
