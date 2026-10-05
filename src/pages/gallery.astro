@@ -4,21 +4,57 @@ import CtaBand from '../components/CtaBand.astro';
 
 const jobs = [
   {
-    src: '/gallery/jason.jpg',
-    alt: 'Before and after headlight restoration on Jason\'s vehicle, driver side',
-    caption: "Jason — driver side",
+    src: '/gallery/2017-toyota-rav4-left.jpg',
+    alt: 'Before and after headlight restoration on a 2017 Toyota RAV4, driver side',
+    caption: '2017 Toyota RAV4 — driver side',
     location: 'Marianna, FL',
   },
   {
-    src: '/gallery/jason-right.jpg',
-    alt: 'Before and after headlight restoration on Jason\'s vehicle, passenger side',
-    caption: 'Jason — passenger side',
+    src: '/gallery/2017-toyota-rav4-right.jpg',
+    alt: 'Before and after headlight restoration on a 2017 Toyota RAV4, passenger side',
+    caption: '2017 Toyota RAV4 — passenger side',
     location: 'Marianna, FL',
   },
   {
-    src: '/gallery/junk.jpg',
-    alt: 'Before and after headlight restoration showing heavy oxidation removed',
-    caption: 'Heavy oxidation — cleared up',
+    src: '/gallery/2014-toyota-camry-left.jpg',
+    alt: 'Before and after headlight restoration on a 2014 Toyota Camry, driver side',
+    caption: '2014 Toyota Camry — driver side',
+    location: 'Marianna, FL',
+  },
+  {
+    src: '/gallery/2014-toyota-camry-right.jpg',
+    alt: 'Before and after headlight restoration on a 2014 Toyota Camry, passenger side',
+    caption: '2014 Toyota Camry — passenger side',
+    location: 'Marianna, FL',
+  },
+  {
+    src: '/gallery/2015-dodge-dart-left.jpg',
+    alt: 'Before and after headlight restoration on a 2015 Dodge Dart, driver side',
+    caption: '2015 Dodge Dart — driver side',
+    location: 'Marianna, FL',
+  },
+  {
+    src: '/gallery/2015-dodge-dart-right.jpg',
+    alt: 'Before and after headlight restoration on a 2015 Dodge Dart, passenger side',
+    caption: '2015 Dodge Dart — passenger side',
+    location: 'Marianna, FL',
+  },
+  {
+    src: '/gallery/2009-chevy-silverado-left.jpg',
+    alt: 'Before and after headlight restoration on a 2009 Chevy Silverado, driver side',
+    caption: '2009 Chevy Silverado — driver side',
+    location: 'Marianna, FL',
+  },
+  {
+    src: '/gallery/2009-chevy-silverado-right.jpg',
+    alt: 'Before and after headlight restoration on a 2009 Chevy Silverado, passenger side',
+    caption: '2009 Chevy Silverado — passenger side',
+    location: 'Marianna, FL',
+  },
+  {
+    src: '/gallery/2003-ford-f150-right.jpg',
+    alt: 'Before and after headlight restoration on a 2003 Ford F-150, passenger side',
+    caption: '2003 Ford F-150 — passenger side',
     location: 'Marianna, FL',
   },
 ];
@@ -37,7 +73,7 @@ const jobs = [
     <div class="gallery-grid">
       {jobs.map((job) => (
         <figure class="gallery-item">
-          <img src={job.src} alt={job.alt} loading="lazy" decoding="async" width="1080" height="1600" />
+          <img src={job.src} alt={job.alt} loading="lazy" decoding="async" width="1080" height="1350" />
           <figcaption>
             <strong>{job.caption}</strong>
             <span>{job.location}</span>
@@ -77,7 +113,7 @@ const jobs = [
     display: block;
     width: 100%;
     height: auto;
-    aspect-ratio: 1080 / 1600;
+    aspect-ratio: 1080 / 1350;
     object-fit: cover;
   }
   .gallery-item figcaption {
