@@ -4,6 +4,18 @@ import CtaBand from '../components/CtaBand.astro';
 
 const jobs = [
   {
+    src: '/gallery/2007-volvo-xc90-left.jpg',
+    alt: 'Before and after headlight restoration on a 2007 Volvo XC90, driver side',
+    caption: '2007 Volvo XC90 — driver side',
+    location: 'Marianna, FL',
+  },
+  {
+    src: '/gallery/2007-volvo-xc90-right.jpg',
+    alt: 'Before and after headlight restoration on a 2007 Volvo XC90, passenger side',
+    caption: '2007 Volvo XC90 — passenger side',
+    location: 'Marianna, FL',
+  },
+  {
     src: '/gallery/2017-toyota-rav4-left.jpg',
     alt: 'Before and after headlight restoration on a 2017 Toyota RAV4, driver side',
     caption: '2017 Toyota RAV4 — driver side',
@@ -73,7 +85,7 @@ const jobs = [
     <div class="gallery-grid">
       {jobs.map((job) => (
         <figure class="gallery-item">
-          <img src={job.src} alt={job.alt} loading="lazy" decoding="async" width="1080" height="1350" />
+          <img src={job.src} alt={job.alt} loading="lazy" decoding="async" width="1080" height="1080" />
           <figcaption>
             <strong>{job.caption}</strong>
             <span>{job.location}</span>
@@ -113,7 +125,7 @@ const jobs = [
     display: block;
     width: 100%;
     height: auto;
-    aspect-ratio: 1080 / 1350;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
   }
   .gallery-item figcaption {
