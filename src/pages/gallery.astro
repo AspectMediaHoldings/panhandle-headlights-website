@@ -2,73 +2,67 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CtaBand from '../components/CtaBand.astro';
 
-const jobs = [
-  {
-    src: '/gallery/2007-volvo-xc90-left.jpg',
-    alt: 'Before and after headlight restoration on a 2007 Volvo XC90, driver side',
-    caption: '2007 Volvo XC90 — driver side',
-    location: 'Marianna, FL',
-  },
-  {
-    src: '/gallery/2007-volvo-xc90-right.jpg',
-    alt: 'Before and after headlight restoration on a 2007 Volvo XC90, passenger side',
-    caption: '2007 Volvo XC90 — passenger side',
-    location: 'Marianna, FL',
-  },
-  {
-    src: '/gallery/2017-toyota-rav4-left.jpg',
-    alt: 'Before and after headlight restoration on a 2017 Toyota RAV4, driver side',
-    caption: '2017 Toyota RAV4 — driver side',
-    location: 'Marianna, FL',
-  },
-  {
-    src: '/gallery/2017-toyota-rav4-right.jpg',
-    alt: 'Before and after headlight restoration on a 2017 Toyota RAV4, passenger side',
-    caption: '2017 Toyota RAV4 — passenger side',
-    location: 'Marianna, FL',
-  },
-  {
-    src: '/gallery/2014-toyota-camry-left.jpg',
-    alt: 'Before and after headlight restoration on a 2014 Toyota Camry, driver side',
-    caption: '2014 Toyota Camry — driver side',
-    location: 'Marianna, FL',
-  },
-  {
-    src: '/gallery/2014-toyota-camry-right.jpg',
-    alt: 'Before and after headlight restoration on a 2014 Toyota Camry, passenger side',
-    caption: '2014 Toyota Camry — passenger side',
-    location: 'Marianna, FL',
-  },
-  {
-    src: '/gallery/2015-dodge-dart-left.jpg',
-    alt: 'Before and after headlight restoration on a 2015 Dodge Dart, driver side',
-    caption: '2015 Dodge Dart — driver side',
-    location: 'Marianna, FL',
-  },
-  {
-    src: '/gallery/2015-dodge-dart-right.jpg',
-    alt: 'Before and after headlight restoration on a 2015 Dodge Dart, passenger side',
-    caption: '2015 Dodge Dart — passenger side',
-    location: 'Marianna, FL',
-  },
-  {
-    src: '/gallery/2009-chevy-silverado-left.jpg',
-    alt: 'Before and after headlight restoration on a 2009 Chevy Silverado, driver side',
-    caption: '2009 Chevy Silverado — driver side',
-    location: 'Marianna, FL',
-  },
-  {
-    src: '/gallery/2009-chevy-silverado-right.jpg',
-    alt: 'Before and after headlight restoration on a 2009 Chevy Silverado, passenger side',
-    caption: '2009 Chevy Silverado — passenger side',
-    location: 'Marianna, FL',
-  },
-  {
-    src: '/gallery/2003-ford-f150-right.jpg',
-    alt: 'Before and after headlight restoration on a 2003 Ford F-150, passenger side',
-    caption: '2003 Ford F-150 — passenger side',
-    location: 'Marianna, FL',
-  },
+type Job = {
+  slug: string;
+  side: 'driver' | 'passenger' | 'left' | 'right';
+  caption: string;
+  location: string;
+  hasWebp: boolean;
+};
+
+const jobs: Job[] = [
+  // Newest first — Nov 13, 2026 through Oct 7, 2026
+  { slug: '2019-toyota-tundra', side: 'driver', caption: '2019 Toyota Tundra — driver side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2019-toyota-tundra', side: 'passenger', caption: '2019 Toyota Tundra — passenger side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2017-ford-focus', side: 'driver', caption: '2017 Ford Focus — driver side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2017-ford-focus', side: 'passenger', caption: '2017 Ford Focus — passenger side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2016-honda-odyssey', side: 'driver', caption: '2016 Honda Odyssey — driver side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2016-honda-odyssey', side: 'passenger', caption: '2016 Honda Odyssey — passenger side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2020-hyundai-palisade', side: 'driver', caption: '2020 Hyundai Palisade SEL — driver side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2020-hyundai-palisade', side: 'passenger', caption: '2020 Hyundai Palisade SEL — passenger side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2009-volkswagen-jetta', side: 'driver', caption: '2009 Volkswagen Jetta — driver side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2009-volkswagen-jetta', side: 'passenger', caption: '2009 Volkswagen Jetta — passenger side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2015-toyota-yaris', side: 'driver', caption: '2015 Toyota Yaris — driver side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2015-toyota-yaris', side: 'passenger', caption: '2015 Toyota Yaris — passenger side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2012-kia-soul', side: 'driver', caption: '2012 Kia Soul — driver side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2012-kia-soul', side: 'passenger', caption: '2012 Kia Soul — passenger side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2016-toyota-camry', side: 'driver', caption: '2016 Toyota Camry — driver side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2016-toyota-camry', side: 'passenger', caption: '2016 Toyota Camry — passenger side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2015-honda-odyssey', side: 'driver', caption: '2015 Honda Odyssey — driver side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2015-honda-odyssey', side: 'passenger', caption: '2015 Honda Odyssey — passenger side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2005-nissan-altima', side: 'driver', caption: '2005 Nissan Altima — driver side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2005-nissan-altima', side: 'passenger', caption: '2005 Nissan Altima — passenger side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2011-toyota-prius', side: 'driver', caption: '2011 Toyota Prius — driver side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2011-toyota-prius', side: 'passenger', caption: '2011 Toyota Prius — passenger side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2006-mercedes-slk350', side: 'driver', caption: '2006 Mercedes SLK350 — driver side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2006-mercedes-slk350', side: 'passenger', caption: '2006 Mercedes SLK350 — passenger side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2011-chrysler-200', side: 'driver', caption: '2011 Chrysler 200 — driver side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2011-chrysler-200', side: 'passenger', caption: '2011 Chrysler 200 — passenger side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2013-nissan-frontier', side: 'driver', caption: '2013 Nissan Frontier — driver side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2013-nissan-frontier', side: 'passenger', caption: '2013 Nissan Frontier — passenger side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2010-mercedes-e350', side: 'driver', caption: '2010 Mercedes E350 — driver side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2010-mercedes-e350', side: 'passenger', caption: '2010 Mercedes E350 — passenger side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2016-kia-optima', side: 'driver', caption: '2016 Kia Optima — driver side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2016-kia-optima', side: 'passenger', caption: '2016 Kia Optima — passenger side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2026-ford-explorer', side: 'driver', caption: 'Ford Explorer — driver side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2026-ford-explorer', side: 'passenger', caption: 'Ford Explorer — passenger side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2026-volvo-xc90', side: 'driver', caption: 'Volvo XC90 — driver side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2026-volvo-xc90', side: 'passenger', caption: 'Volvo XC90 — passenger side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2026-kia-rio', side: 'driver', caption: 'Kia Rio — driver side', location: 'Marianna, FL', hasWebp: true },
+  { slug: '2026-kia-rio', side: 'passenger', caption: 'Kia Rio — passenger side', location: 'Marianna, FL', hasWebp: true },
+
+  // Legacy jobs — JPG only
+  { slug: '2007-volvo-xc90', side: 'left', caption: '2007 Volvo XC90 — driver side', location: 'Marianna, FL', hasWebp: false },
+  { slug: '2007-volvo-xc90', side: 'right', caption: '2007 Volvo XC90 — passenger side', location: 'Marianna, FL', hasWebp: false },
+  { slug: '2017-toyota-rav4', side: 'left', caption: '2017 Toyota RAV4 — driver side', location: 'Marianna, FL', hasWebp: false },
+  { slug: '2017-toyota-rav4', side: 'right', caption: '2017 Toyota RAV4 — passenger side', location: 'Marianna, FL', hasWebp: false },
+  { slug: '2014-toyota-camry', side: 'left', caption: '2014 Toyota Camry — driver side', location: 'Marianna, FL', hasWebp: false },
+  { slug: '2014-toyota-camry', side: 'right', caption: '2014 Toyota Camry — passenger side', location: 'Marianna, FL', hasWebp: false },
+  { slug: '2015-dodge-dart', side: 'left', caption: '2015 Dodge Dart — driver side', location: 'Marianna, FL', hasWebp: false },
+  { slug: '2015-dodge-dart', side: 'right', caption: '2015 Dodge Dart — passenger side', location: 'Marianna, FL', hasWebp: false },
+  { slug: '2009-chevy-silverado', side: 'left', caption: '2009 Chevy Silverado — driver side', location: 'Marianna, FL', hasWebp: false },
+  { slug: '2009-chevy-silverado', side: 'right', caption: '2009 Chevy Silverado — passenger side', location: 'Marianna, FL', hasWebp: false },
+  { slug: '2003-ford-f150', side: 'right', caption: '2003 Ford F-150 — passenger side', location: 'Marianna, FL', hasWebp: false },
 ];
 ---
 <BaseLayout
@@ -85,7 +79,19 @@ const jobs = [
     <div class="gallery-grid">
       {jobs.map((job) => (
         <figure class="gallery-item">
-          <img src={job.src} alt={job.alt} loading="lazy" decoding="async" width="1080" height="1080" />
+          <picture>
+            {job.hasWebp && (
+              <source srcset={`/gallery/${job.slug}-${job.side}.webp`} type="image/webp" />
+            )}
+            <img
+              src={`/gallery/${job.slug}-${job.side}.jpg`}
+              alt={`Before and after headlight restoration on a ${job.caption.split(' — ')[0]}, ${job.side} side`}
+              loading="lazy"
+              decoding="async"
+              width="1080"
+              height="1080"
+            />
+          </picture>
           <figcaption>
             <strong>{job.caption}</strong>
             <span>{job.location}</span>
@@ -121,6 +127,7 @@ const jobs = [
     background: var(--card, #111);
     box-shadow: 0 6px 24px rgba(0,0,0,0.18);
   }
+  .gallery-item picture,
   .gallery-item img {
     display: block;
     width: 100%;

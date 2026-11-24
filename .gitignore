@@ -10,6 +10,9 @@ Thumbs.db
 dist/
 .astro/
 
+# gallery staging — raw source photos, decode scripts, manifests
+public/gallery/_incoming/
+
 # print/marketing artifacts (belong in panhandle-print/ or Drive, not the website repo)
 Business Card*
 Color Business Card*
