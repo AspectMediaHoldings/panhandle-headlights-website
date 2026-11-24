@@ -11,25 +11,16 @@ type Job = {
 };
 
 const jobs: Job[] = [
-  // Newest first — Nov 13, 2026 through Oct 7, 2026
-  { slug: '2019-toyota-tundra', side: 'driver', caption: '2019 Toyota Tundra — driver side', location: 'Marianna, FL', hasWebp: true },
-  { slug: '2019-toyota-tundra', side: 'passenger', caption: '2019 Toyota Tundra — passenger side', location: 'Marianna, FL', hasWebp: true },
+  // Newest first — verified vehicle matches only
   { slug: '2017-ford-focus', side: 'driver', caption: '2017 Ford Focus — driver side', location: 'Marianna, FL', hasWebp: true },
   { slug: '2017-ford-focus', side: 'passenger', caption: '2017 Ford Focus — passenger side', location: 'Marianna, FL', hasWebp: true },
-  { slug: '2016-honda-odyssey', side: 'driver', caption: '2016 Honda Odyssey — driver side', location: 'Marianna, FL', hasWebp: true },
-  { slug: '2016-honda-odyssey', side: 'passenger', caption: '2016 Honda Odyssey — passenger side', location: 'Marianna, FL', hasWebp: true },
   { slug: '2020-hyundai-palisade', side: 'driver', caption: '2020 Hyundai Palisade SEL — driver side', location: 'Marianna, FL', hasWebp: true },
   { slug: '2020-hyundai-palisade', side: 'passenger', caption: '2020 Hyundai Palisade SEL — passenger side', location: 'Marianna, FL', hasWebp: true },
   { slug: '2009-volkswagen-jetta', side: 'driver', caption: '2009 Volkswagen Jetta — driver side', location: 'Marianna, FL', hasWebp: true },
   { slug: '2009-volkswagen-jetta', side: 'passenger', caption: '2009 Volkswagen Jetta — passenger side', location: 'Marianna, FL', hasWebp: true },
   { slug: '2015-toyota-yaris', side: 'driver', caption: '2015 Toyota Yaris — driver side', location: 'Marianna, FL', hasWebp: true },
-  { slug: '2015-toyota-yaris', side: 'passenger', caption: '2015 Toyota Yaris — passenger side', location: 'Marianna, FL', hasWebp: true },
-  { slug: '2012-kia-soul', side: 'driver', caption: '2012 Kia Soul — driver side', location: 'Marianna, FL', hasWebp: true },
-  { slug: '2012-kia-soul', side: 'passenger', caption: '2012 Kia Soul — passenger side', location: 'Marianna, FL', hasWebp: true },
   { slug: '2016-toyota-camry', side: 'driver', caption: '2016 Toyota Camry — driver side', location: 'Marianna, FL', hasWebp: true },
   { slug: '2016-toyota-camry', side: 'passenger', caption: '2016 Toyota Camry — passenger side', location: 'Marianna, FL', hasWebp: true },
-  { slug: '2015-honda-odyssey', side: 'driver', caption: '2015 Honda Odyssey — driver side', location: 'Marianna, FL', hasWebp: true },
-  { slug: '2015-honda-odyssey', side: 'passenger', caption: '2015 Honda Odyssey — passenger side', location: 'Marianna, FL', hasWebp: true },
   { slug: '2005-nissan-altima', side: 'driver', caption: '2005 Nissan Altima — driver side', location: 'Marianna, FL', hasWebp: true },
   { slug: '2005-nissan-altima', side: 'passenger', caption: '2005 Nissan Altima — passenger side', location: 'Marianna, FL', hasWebp: true },
   { slug: '2011-toyota-prius', side: 'driver', caption: '2011 Toyota Prius — driver side', location: 'Marianna, FL', hasWebp: true },
@@ -42,8 +33,6 @@ const jobs: Job[] = [
   { slug: '2013-nissan-frontier', side: 'passenger', caption: '2013 Nissan Frontier — passenger side', location: 'Marianna, FL', hasWebp: true },
   { slug: '2010-mercedes-e350', side: 'driver', caption: '2010 Mercedes E350 — driver side', location: 'Marianna, FL', hasWebp: true },
   { slug: '2010-mercedes-e350', side: 'passenger', caption: '2010 Mercedes E350 — passenger side', location: 'Marianna, FL', hasWebp: true },
-  { slug: '2016-kia-optima', side: 'driver', caption: '2016 Kia Optima — driver side', location: 'Marianna, FL', hasWebp: true },
-  { slug: '2016-kia-optima', side: 'passenger', caption: '2016 Kia Optima — passenger side', location: 'Marianna, FL', hasWebp: true },
   { slug: '2026-ford-explorer', side: 'driver', caption: 'Ford Explorer — driver side', location: 'Marianna, FL', hasWebp: true },
   { slug: '2026-ford-explorer', side: 'passenger', caption: 'Ford Explorer — passenger side', location: 'Marianna, FL', hasWebp: true },
   { slug: '2026-volvo-xc90', side: 'driver', caption: 'Volvo XC90 — driver side', location: 'Marianna, FL', hasWebp: true },
@@ -132,7 +121,7 @@ const jobs: Job[] = [
     display: block;
     width: 100%;
     height: auto;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 27 / 40;
     object-fit: cover;
   }
   .gallery-item figcaption {
@@ -140,12 +129,15 @@ const jobs: Job[] = [
     display: flex;
     flex-direction: column;
     gap: .15rem;
+    background: #f6f4ef;
+    color: #10141c;
   }
   .gallery-item figcaption strong {
     font-size: 1rem;
+    color: #10141c;
   }
   .gallery-item figcaption span {
-    color: var(--muted);
+    color: #5f6470;
     font-size: .875rem;
   }
   @media (max-width: 900px) {
